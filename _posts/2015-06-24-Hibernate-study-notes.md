@@ -392,7 +392,7 @@ configure().
 addAnnotatedClass(Employee.class). buildSessionFactory();
 ~~~
 
-## criteria queries
+## Criteria queries
 
 The Hibernate Session interface provides createCriteria() method which can be used to create aCriteria object that returns instances of the persistence object's class when your application executes a criteria query.
 simplest example of a criteria query is one which will simply return every object that corresponds to the Employee class.
