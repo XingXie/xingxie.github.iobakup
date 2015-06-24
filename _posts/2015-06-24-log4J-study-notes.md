@@ -149,7 +149,7 @@ Hint: If you do not want Tomcat to use log4j to log but only your application, y
 
 ## Best practices for exception logging
 
-1. Do not use e.printStackTrace
+* Do not use e.printStackTrace
 e.printStackTrace prints to the console. You will only see this messages, if you have defined a console appender. If you use Tomcat or other application server with a service wrapper and define a console appender, you will blow up your wrapper.log. You can use log.error(e,e). The second parameter passed an exception and will print the stack trace into the logfile.
 
 ~~~ java
@@ -161,10 +161,10 @@ try {
 }
 ~~~
 
-2. Don't log and throw again
+* Don't log and throw again
 Do not catch an exception, log the stacktrace and then continue to throw it. If higher levels log a message as well, you will end up with a stacktrace printed 2 or more times into the log files.
 
-3. Don't kill the stacktrace
+* Don't kill the stacktrace
 This code will erase the stacktrace from the SQLException. This is not recommended, because you will loose important information about the exception. Better do the following.
 That's all for this tutorial.
 
