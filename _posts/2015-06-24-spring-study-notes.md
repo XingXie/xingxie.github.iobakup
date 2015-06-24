@@ -58,6 +58,7 @@ To inheritate the properties from the teamplate.
 ## Basics
 
 the Beans.xml file is under the src directory
+
 ~~~ xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -130,6 +131,7 @@ public class MainApp {
 context.registerShutdownHook for triggering the destroy method. 
 
 In Beans.xml configuration, must have
+
 ~~~ xml
 <bean class="com.tutorialspoint.InitHelloWorld" /> </beans>
 ~~~
@@ -163,6 +165,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
 ~~~
 
 ## Constructor-based Dependency Injection￼
+
 ~~~ xml
 <bean id="textEditor" class="com.tutorialspoint.TextEditor">
 <constructor-arg ref="spellChecker"/>
@@ -173,6 +176,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
 ~~~
 
 ## DI for TextEditor with SpellChecker
+
 ~~~ java
 ￼public class TextEditor {
    private SpellChecker spellChecker;
@@ -187,7 +191,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
 ~~~
 
 ~~~ xml
-// Beans.xml  
+<!-- Beans.xml --> 
 <!-- Definition for textEditor bean -->
 <bean id="textEditor" class="com.tutorialspoint.TextEditor"> <constructor-arg ref="spellChecker"/>
 </bean>
@@ -242,6 +246,7 @@ public class Foo {
 ~~~
 
 ￼Finally and the best way to pass constructor argument
+
 ~~~ xml
 <beans>
 <bean id="exampleBean" class="examples.ExampleBean">
@@ -252,6 +257,7 @@ public class Foo {
 
 
 setter-based injection, different from constructor-based: <property + ref> vs <constructor-based + ref>, object should user ref attr, value uses value.
+
 ~~~ xml
 <?xml version="1.0" encoding="UTF-8"?>
  <beans xmlns="http://www.springframework.org/schema/beans"
@@ -266,6 +272,7 @@ setter-based injection, different from constructor-based: <property + ref> vs <c
 ~~~
 
 XML p-namespace, spouse-ref: refer to another bean. Notice that value always has ""
+
 ~~~ xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
@@ -297,6 +304,7 @@ p:spouse-ref="jane"/>
 ~~~
 
 ## Injecting collection / references/ null/empty value
+
 ~~~ xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
@@ -321,6 +329,7 @@ p:spouse-ref="jane"/>
 ~~~
 
 ￼￼￼￼￼￼￼￼The preceding example is equivalent to the Java code: exampleBean.setEmail(""). If you need to pass an NULL value then you can pass it as follows:
+
 ~~~ xml
 ￼￼￼￼￼￼<bean id="..." class="exampleBean">
  <property name="email"><null/></property>
@@ -328,6 +337,7 @@ p:spouse-ref="jane"/>
 ~~~
 ￼
 ## Autowiring
+
 ~~~ xml
 <!-- by name -->
 <!-- origin: Definition for textEditor bean -->
@@ -358,7 +368,7 @@ public TextEditor( SpellChecker spellChecker, String name ) {
 ~~~
 
 ~~~ xml
-// beans.xml
+<!--beans.xml -->
 <!-- Definition for textEditor bean -->
 <bean id="textEditor" class="com.tutorialspoint.TextEditor" autowire="constructor">
 <constructor-arg value="Generic Text Editor"/>
@@ -369,6 +379,7 @@ public TextEditor( SpellChecker spellChecker, String name ) {
 ~~~
 
 ## Anotation configuration
+
 ~~~ java
 // @required : beans.xml must specify the name/value
 
@@ -394,9 +405,11 @@ return age; }
    return name;
   }}
 ~~~
-// @Autowired  
+
+@Autowired: 
 You can use @Autowired annotation on properties to get rid of the setter methods. When you will pass values of autowired properties using <property> Spring will automatically assign those properties with the passed values or references.
 ￼The @Required annotation applies to bean property setter methods and it indicates that the affected bean property must be populated in XML configuration file at configuration time otherwise the container throws a BeanInitializationException exception.
+
 ~~~ java
 // no setter method!
 import org.springframework.beans.factory.annotation.Autowired;
@@ -441,6 +454,7 @@ public class Profile {
 <property name="age" value="2"/>
    </bean>
    ~~~
+   
 Output will be using the student1 value for name and age
 
 
@@ -513,6 +527,7 @@ public Foo foo() {
 ~~~
 
 ## Event handling
+
 ~~~ java
 // CStartEventHandler.java
  package com.tutorialspoint;
@@ -543,6 +558,7 @@ public class MainApp {
 
 
 beans.xml piece
+
 ~~~ xml
 <bean id="cStartEventHandler"
  class="com.tutorialspoint.CStartEventHandler"/>
@@ -553,6 +569,7 @@ beans.xml piece
 Spring JDBC Framework takes care of all the low-level details starting from opening the connection, prepare and execute the SQL statement, process exceptions, handle transactions and finally close the connection.
 
 The JdbcTemplate class executes SQL queries, update statements and stored procedure calls, performs iteration over ResultSets and extraction of returned parameter values. It also catches JDBC exceptions and translates them to the generic, more informative, exception hierarchy defined in the org.springframework.dao package.
+
 ~~~ xml
 <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSour ce">
 <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
@@ -560,10 +577,12 @@ The JdbcTemplate class executes SQL queries, update statements and stored proced
 <property name="password" value="password"/>
 </bean>
 ~~~
+
 DAO stands for data access object which is commonly used for database interaction. DAOs exist to provide a means to read and write data to the database and they should expose this functionality through an interface by which the rest of the application will access them.
 DAO support in Spring works with data access technologies like JDBC, Hibernate, JPA or JDO in a consistent way.
 You can use the execute(..) method from jdbcTemplate to execute any SQL statements or DDL statements.
 Now we need to supply a DataSource to the JdbcTemplate so it can configure itself to get database access. You can   configure the DataSource in the XML file with a piece of code as shown below:
+
 ~~~ xml
 <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSour ce">
  <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
@@ -573,13 +592,16 @@ Now we need to supply a DataSource to the JdbcTemplate so it can configure itsel
 ~~~
 
 //Inserting a row into the table:
+
 ~~~ java
  String SQL = "insert into Student (name, age) values (?, ?)";
  jdbcTemplateObject.update( SQL, new Object[]{"Zara", 11} );
 ~~~
 
-// Beans.xml
+
+
 ~~~ xml
+<!-- Beans.xml -->
    <!-- Initialization for data source -->
    <bean id="dataSource"
 class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -615,6 +637,7 @@ DELIMITER ;
 ~~~
 
 The TransactionDefinition is the core interface of the transaction support in Spring and it is defined as below:
+
 ~~~ java
 public interface TransactionDefinition {
    int getPropagationBehavior();
