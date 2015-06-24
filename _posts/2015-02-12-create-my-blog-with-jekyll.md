@@ -7,9 +7,6 @@ excerpt: Jekyll Github 搭建静态博客 blog 高浩阳 使用多说评论系�
 comments: true
 ---
 
-* content
-{:toc}
-
 
 ## 序
 
