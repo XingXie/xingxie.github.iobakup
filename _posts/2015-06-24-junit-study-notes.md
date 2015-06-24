@@ -16,7 +16,9 @@ JUnit test framework provides following important features
 4. JUnit classes
 
 Fixtures
+
 Fixtures is a fixed state of a set of objects used as a baseline for running tests. The purpose of a test fixture is to ensure that there is a well known and fixed environment in which tests are run so that results are repeatable. It includes
+
 ..* setUp() method which runs before every test invocation.
 ..* tearDown() method which runs after every test method.
 
@@ -25,6 +27,7 @@ Test suite means bundle a few unit test cases and run it together. In JUnit, bot
 Test runner is used for executing the test cases. Here is an example which assumes TestJunit test class already exists.
 
 JUnit classes are important classes which is used in writing and testing JUnits. Some of the important classes are
+
 * Assert which contain a set of assert methods.
 * TestCase which contain a test case defines the fixture to run multiple tests.
 * TestResult which contain methods to collect the results of executing a test case.
