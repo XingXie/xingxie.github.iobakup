@@ -107,11 +107,18 @@ System.out.println("Parameterized Number is : " + inputNumber); assertEquals(exp
 ```
 <!--#{% endhighlight %}-->
 
-## [good test practice rules](http://howtodoinjava.com/2012/11/05/unit-testing-best-practices-junit-reference-guide/)
-
+## [Good test practice rules](http://howtodoinjava.com/2012/11/05/unit-testing-best-practices-junit-reference-guide/)
 
 Tips for writing great unit tests
 
+* in before class
+* in before
+* in test case 1
+* in after
+* in before
+* in test case 2
+* in after
+* in after class
 * nit testing is not about finding bugs
 * Test only one code unit at a time
 * Don’t make unnecessary assertions
