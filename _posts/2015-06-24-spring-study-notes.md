@@ -24,11 +24,13 @@ if you want to apply to prototype
 For destroy method, only context.close call then destroy method is called.
 
 Use the properties in bean
-~~~ xml
 method 1: 
+~~~ xml
 <context:property-placeholder location="classpath:helloworld2.properties" />
+~~~
 
 method 2:
+~~~ xml
 <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
  <property name="location">
   <value>helloworld2.properties </value>
@@ -38,9 +40,7 @@ method 2:
 
 You can use multiple input in first method, using ,but save the classpath keyword.
 
-=---- include multiple properties
-use locations instead of location
-get and set methods must include for adding @Value("${name}") to primitives 
+include multiple properties: use locations instead of location: get and set methods must include for adding @Value("${name}") to primitives 
 (http://springcert.sourceforge.net/study-notes-3.html)
 
 Spring is a container (Beans.xml). It contains beans (pojo classes) which can be initiated (getbean) by others.  
@@ -54,7 +54,7 @@ To inheritate the properties from the teamplate.
 
 ## Basics
 
-// the Beans.xml file is under the src directory
+the Beans.xml file is under the src directory
 ~~~ xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -78,20 +78,21 @@ ApplicationContext context = new FileSystemXmlApplicationContext
              ("C:/Users/ZARA/workspace/HelloSpring/src/Beans.xml");
 ~~~
 
-//Scope
-singleton: ￼￼This scopes the bean definition to a single instance per Spring IoC container (default).
-￼
-prototype:￼￼ This scopes a single bean definition to have any number of object instances.
-￼
-request, session: ￼This scopes a bean definition to an HTTP request. Only valid in the context of a web-aware Spring ApplicationContext.
-￼
-global-session: ￼This scopes a bean definition to a global HTTP session. Only valid in the context of a web-aware Spring ApplicationContext.        
+Scope
 
-//An ApplicationContext automatically detects any beans that are defined
+1. singleton: ￼￼This scopes the bean definition to a single instance per Spring IoC container (default).
+￼
+2. prototype:￼￼ This scopes a single bean definition to have any number of object instances.
+￼
+3. request, session: ￼This scopes a bean definition to an HTTP request. Only valid in the context of a web-aware Spring ApplicationContext.
+￼
+4. global-session: ￼This scopes a bean definition to a global HTTP session. Only valid in the context of a web-aware Spring ApplicationContext.        
 
-//with implementation of theBeanPostProcessor interface and registers these
+An ApplicationContext automatically detects any beans that are defined
 
-//beans as post-processors, to be then called appropriately by the container upon bean creation.
+With implementation of theBeanPostProcessor interface and registers these
+
+Beans as post-processors, to be then called appropriately by the container upon bean creation.
 
 ~~~ java
 package com.tutorialspoint;
@@ -125,7 +126,7 @@ public class MainApp {
 
 context.registerShutdownHook for triggering the destroy method. 
 
-//in Beans.xml configuration, must have
+In Beans.xml configuration, must have
 ~~~ xml
 <bean class="com.tutorialspoint.InitHelloWorld" /> </beans>
 ~~~
@@ -235,8 +236,10 @@ public class Foo {
 <constructor-arg type="java.lang.String" value="Zara"/>
 </bean>
 </beans>
+~~~
 
-// ￼Finally and the best way to pass constructor argument
+￼Finally and the best way to pass constructor argument
+~~~ xml
 <beans>
 <bean id="exampleBean" class="examples.ExampleBean">
 <constructor-arg index="0" value="2001"/> <constructor-arg index="1" value="Zara"/>
@@ -244,11 +247,9 @@ public class Foo {
 </beans>
 ~~~
 
-~~~ xml
-// setter-based injection
-// different from constructor-based: <property + ref> vs <constructor-based + ref>
-object should user ref attr, value uses value.
 
+setter-based injection, different from constructor-based: <property + ref> vs <constructor-based + ref>, object should user ref attr, value uses value.
+~~~ xml
 <?xml version="1.0" encoding="UTF-8"?>
  <beans xmlns="http://www.springframework.org/schema/beans"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
@@ -259,10 +260,10 @@ object should user ref attr, value uses value.
    <!-- Definition for spellChecker bean -->
  <bean id="spellChecker" class="com.tutorialspoint.SpellChecker"> </bean>
 </beans>
+~~~
 
-// XML p-namespace
-// spouse-ref: refer to another bean
-// Notice that value always has ""
+XML p-namespace, spouse-ref: refer to another bean. Notice that value always has ""
+~~~ xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 <bean id="john-classic" class="com.example.Person" p:name="John Doe"
@@ -314,8 +315,10 @@ p:spouse-ref="jane"/>
 <bean id="..." class="exampleBean">
  <property name="email" value=""/>
 </bean>
+~~~
 
-//￼￼￼￼￼￼￼￼The preceding example is equivalent to the Java code: exampleBean.setEmail(""). If you need to pass an NULL //value then you can pass it as follows:
+￼￼￼￼￼￼￼￼The preceding example is equivalent to the Java code: exampleBean.setEmail(""). If you need to pass an NULL value then you can pass it as follows:
+~~~ xml
 ￼￼￼￼￼￼<bean id="..." class="exampleBean">
  <property name="email"><null/></property>
 </bean>
@@ -323,7 +326,7 @@ p:spouse-ref="jane"/>
 ￼
 ## Autowiring
 ~~~ xml
-// by name
+<!-- by name -->
 <!-- origin: Definition for textEditor bean -->
    <bean id="textEditor" class="com.tutorialspoint.TextEditor">
       <property name="spellChecker" ref="spellChecker" />
@@ -434,8 +437,9 @@ public class Profile {
 <bean id="student2" class="com.tutorialspoint.Student"> <property name="name" value="Nuha" />
 <property name="age" value="2"/>
    </bean>
-// output will be using the student1 value for name and age
-~~~
+   ~~~
+Output will be using the student1 value for name and age
+
 
 Annotating a class with the @Configuration indicates that the class can be used by the Spring IoC container as a source of bean definitions. The @Bean annotation tells Spring that a method annotated with @Bean will return an object that should be registered as a bean in the Spring application context. The simplest possible @Configuration class would be:
 
@@ -534,8 +538,9 @@ public class MainApp {
 }
 ~~~
 
+
+beans.xml piece
 ~~~ xml
-// beans.xml piece
 <bean id="cStartEventHandler"
  class="com.tutorialspoint.CStartEventHandler"/>
  ~~~
@@ -562,13 +567,16 @@ Now we need to supply a DataSource to the JdbcTemplate so it can configure itsel
  <property name="url" value="jdbc:mysql://localhost:3306/TEST"/> <property name="username" value="root"/>
  <property name="password" value="password"/>
 </bean>
+~~~
 
 //Inserting a row into the table:
+~~~ java
  String SQL = "insert into Student (name, age) values (?, ?)";
  jdbcTemplateObject.update( SQL, new Object[]{"Zara", 11} );
-
+~~~
 
 // Beans.xml
+~~~ xml
    <!-- Initialization for data source -->
    <bean id="dataSource"
 class="org.springframework.jdbc.datasource.DriverManagerDataSource">
