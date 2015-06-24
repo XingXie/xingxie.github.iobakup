@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Jenkins Study Notes"
-date:   2015-06-12 14:06:05
+date:   2015-06-24
 categories: Jenkins
 excerpt: Jenkins study notes
 comments: true
