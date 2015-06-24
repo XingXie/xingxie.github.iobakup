@@ -53,13 +53,13 @@ The most important package in classses. Some of the important class are:
 If a test case takes more time than specified number
 of milliseconds then Junit will automatically mark it as failed.
 
-## exception test
+## Exception test
 It provides an option of tracing the Exception handling of code. You can test the code
 whether code throws desired exception or not. The expected parameter is used along with @Test annotation. Now let's see @Test(expected) in action.
 
 @Test(expected = ArithmeticException.class)
 
-## parameterized test
+## Parameterized test
 
 A new feature Parameterized tests. Parameterized tests allow developer to run the same test over and over again using different values. There are five steps,
 that you need to follow to create Parameterized tests.
@@ -107,7 +107,7 @@ System.out.println("Parameterized Number is : " + inputNumber); assertEquals(exp
 ```
 <!--#{% endhighlight %}-->
 
-### [good test practice rules](http://howtodoinjava.com/2012/11/05/unit-testing-best-practices-junit-reference-guide/)
+## [good test practice rules](http://howtodoinjava.com/2012/11/05/unit-testing-best-practices-junit-reference-guide/)
 
 
 Tips for writing great unit tests
