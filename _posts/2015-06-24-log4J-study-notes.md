@@ -18,6 +18,8 @@ comments: true
 
   </loggers>
 ~~~
+{: .language-xml}
+
 ## customized appender
 
 Make sure the packages in configuration includes the self defined appenders. and MessageConsole tab is the name attribute of your MessageConsole
