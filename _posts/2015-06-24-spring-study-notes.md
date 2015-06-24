@@ -24,12 +24,15 @@ if you want to apply to prototype
 For destroy method, only context.close call then destroy method is called.
 
 Use the properties in bean
+
 method 1: 
+
 ~~~ xml
 <context:property-placeholder location="classpath:helloworld2.properties" />
 ~~~
 
 method 2:
+
 ~~~ xml
 <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
  <property name="location">
