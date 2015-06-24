@@ -15,8 +15,6 @@ JUnit test framework provides following important features
 3. Test runners
 4. JUnit classes
 
-Fixtures
-
 Fixtures is a fixed state of a set of objects used as a baseline for running tests. The purpose of a test fixture is to ensure that there is a well known and fixed environment in which tests are run so that results are repeatable. It includes
 
 ..* setUp() method which runs before every test invocation.
@@ -34,9 +32,13 @@ JUnit classes are important classes which is used in writing and testing JUnits.
 
 ## Junit API
 The most important package in classses. Some of the important class are:
+
 1. Assert: a set of assert methods
+
 2. TestCase: A test case defines the fixture to run multiple tests
+
 3. TestResult: collects the results of executing a test case
+
 4. TestSuite: a composite of tests
 
 ## execution procedure
