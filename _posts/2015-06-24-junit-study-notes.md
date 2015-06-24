@@ -69,7 +69,8 @@ that you need to follow to create Parameterized tests.
 * Create an instance variable for each "column" of test data.
 * Create your tests case(s) using the instance variables as the source of the test data.
 
-{% highlight java %}
+<!--{% highlight java %}-->
+```java
 import java.util.Arrays;
 import java.util.Collection;
 import org.junit.Test;
@@ -102,7 +103,8 @@ return Arrays.asList(new Object[][] { { 2, true },
 public void testPrimeNumberChecker() {
 System.out.println("Parameterized Number is : " + inputNumber); assertEquals(expectedResult, primeNumberChecker.validate(inputNumber));
 } }
-{% endhighlight %}
+```
+<!--#{% endhighlight %}-->
 
 ### [good test practice rules](http://howtodoinjava.com/2012/11/05/unit-testing-best-practices-junit-reference-guide/)
 
