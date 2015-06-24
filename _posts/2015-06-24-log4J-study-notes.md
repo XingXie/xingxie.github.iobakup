@@ -7,7 +7,6 @@ excerpt: Log4J
 comments: true
 ---
 
-
 ## Different log level use
 ```xml
  <loggers>    
@@ -101,9 +100,9 @@ or we can reload the configuration:
 DOMConfigurator.configure(url);
 ```
 
-// seperate the file output
-I want to have debugging messages to one file and other messages to another file. This can only be done with XML because we need a LevelRange filter.
-// in debug fuile, watch the filter attribute
+Seperate the file output: I want to have debugging messages to one file and other messages to another file. This can only be done with XML because we need a LevelRange filter.
+in debug fuile, watch the filter attribute
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
