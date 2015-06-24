@@ -4,6 +4,7 @@ title:  "Log4j Study Notes"
 date:   2015-06-15 14:06:05
 categories: Log4J
 excerpt: Log4J
+comments: true
 ---
 
 
@@ -61,6 +62,7 @@ log4j.appender.stdout.Target=System.out
 log4j.appender.stdout.layout=org.apache.log4j.SimpleLayout
 log4j.rootLogger=debug, stdout
 
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
 <log4j:configuration>
@@ -72,6 +74,7 @@ log4j.rootLogger=debug, stdout
   <appender-ref ref="stdout"/>
 </root>
 </log4j:configuration>
+```
 
 ```java
 // You can load other configurations as well.
@@ -101,6 +104,7 @@ DOMConfigurator.configure(url);
 // seperate the file output
 I want to have debugging messages to one file and other messages to another file. This can only be done with XML because we need a LevelRange filter.
 // in debug fuile, watch the filter attribute
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
 <log4j:configuration>
@@ -135,6 +139,7 @@ I want to have debugging messages to one file and other messages to another file
   <appender-ref ref="file" />
 </root>
 </log4j:configuration>
+```
 
 ## Work with Tomcat
 
