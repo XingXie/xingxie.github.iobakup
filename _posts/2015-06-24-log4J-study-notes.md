@@ -1,19 +1,14 @@
 ---
 layout: post
-title:  "JavaScript 面向对象"
+title:  "Log4j Study Notes"
 date:   2015-06-15 14:06:05
-categories: JavaScript
-excerpt: JavaScript 面向对象的技术
+categories: Log4J
+excerpt: Log4J
 ---
 
 
-=== log4j 2.x
-http://logging.apache.org/log4j/2.x/manual/configuration.html
-
----- log4j2.xml puts to the source file
-
---- different log level use
-
+## Different log level use
+```xml
  <loggers>    
   <logger name="logexample.Bar" level="TRACE"/>
 
@@ -23,10 +18,12 @@ http://logging.apache.org/log4j/2.x/manual/configuration.html
     </root>  
 
   </loggers>
+```
+## customized appender
 
----- customized appender
- make sure the packages in configuration includes the self defined appenders. and MessageConsole tab is the name attribute of your MessageConsole
+Make sure the packages in configuration includes the self defined appenders. and MessageConsole tab is the name attribute of your MessageConsole
 
+```xml
 <?xml version="1.0" encoding="UTF-8"?>    
 <configuration status="error" packages="logexample">    
   <appenders>    
@@ -44,13 +41,12 @@ http://logging.apache.org/log4j/2.x/manual/configuration.html
        <AppenderRef ref="Console" />   
     </root>  
   </loggers>    
-
 </configuration>
+```
 
+## Basics
 
-
----- book knowledge =--------------
-// Properties can be defined by a properties file or by an XML file. Log4j looks for a file named log4j.xml and then for a file named log4j.properties. Both must be placed in the src folder.
+Properties can be defined by a properties file or by an XML file. Log4j looks for a file named log4j.xml and then for a file named log4j.properties. Both must be placed in the src folder.
 
 The property file is less verbose than an XML file. The XML requires the log4j.dtd to be placed in the source folder as well.  The properties file does not support some advanced configuration options like Filters, custom ErrorHandlers and a special type of appenders, i.e. AsyncAppender. ErrorHandlers defines how errors in log4j itself are handled, for example badly configured appenders. Filters are more interesting. From the available filters, I think that the level range filter is really missing for property files.
 
@@ -77,6 +73,7 @@ log4j.rootLogger=debug, stdout
 </root>
 </log4j:configuration>
 
+```java
 // You can load other configurations as well.
 import org.apache.log4j.PropertyConfigurator;
 import org.apache.log4j.helpers.Loader;
@@ -99,6 +96,7 @@ root.setLevel(Level.WARN);
 or we can reload the configuration:
 // PropertyConfigurator.configure(url);
 DOMConfigurator.configure(url);
+```
 
 // seperate the file output
 I want to have debugging messages to one file and other messages to another file. This can only be done with XML because we need a LevelRange filter.
@@ -138,28 +136,35 @@ I want to have debugging messages to one file and other messages to another file
 </root>
 </log4j:configuration>
 
-// work with Tomcat
+## Work with Tomcat
+
 Hint: If you do not place a configuration file in one of your applications, it will use the Tomcat log files for logging.
+
 Hint: If you do not want Tomcat to use log4j to log but only your application, you can place log4j in the WEB-INF-lib directory of your application as well.
 
-// Best practices for exception logging
-// 1 Do not use e.printStackTrace
+## Best practices for exception logging
+
+1. Do not use e.printStackTrace
 e.printStackTrace prints to the console. You will only see this messages, if you have defined a console appender. If you use Tomcat or other application server with a service wrapper and define a console appender, you will blow up your wrapper.log. You can use log.error(e,e). The second parameter passed an exception and will print the stack trace into the logfile.
+```java
 try {
     ......... snip .......
 } catch (SomeException e) {
     log.error("Exception Message", e);
     // display error message to customer
 }
+```
 
-// 2 Don't log and throw again
+2. Don't log and throw again
 Do not catch an exception, log the stacktrace and then continue to throw it. If higher levels log a message as well, you will end up with a stacktrace printed 2 or more times into the log files.
 
-// 3 Don't kill the stacktrace
+3. Don't kill the stacktrace
 This code will erase the stacktrace from the SQLException. This is not recommended, because you will loose important information about the exception. Better do the following.
 That's all for this tutorial.
+```java
  try{
 ... some code
     }catch(SQLException e){
         throw new RuntimeException("My Exception name", e);
 }￼￼
+```
