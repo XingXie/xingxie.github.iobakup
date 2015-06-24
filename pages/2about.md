@@ -11,7 +11,7 @@ icon: glyphicon-heart
 
 ---
 
-### Contact ME
+### Contact Me
 
 * email:[xingxie01@gmail.com](mailto:{{ site.email }})
 * Linkin:[Xing Xie](https://www.linkedin.com/pub/xing-xie/30/320/1a3)
