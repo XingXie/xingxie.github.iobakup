@@ -7,9 +7,6 @@ excerpt: JUnit
 comments: true
 ---
 
-* content
-{:toc}
-
 ## Basics
 
 JUnit test framework provides following important features
