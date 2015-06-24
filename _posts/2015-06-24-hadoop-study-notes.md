@@ -46,7 +46,7 @@ Secondary NameNode: performs periodic checkpoints of the namespace and helps kee
 
 3. preparing for mapreduce: loading files (64, 128MB), file system(native file system, hdfs, cloud), output(immutable), you define(input, map, reduce, output, use java or other languages, work with key-value pairs)
 
-4. [A nice chinese blog](http://www.cnblogs.com/sharpxiajun/p/3151395.html) [Another Chinese blog] (http://dongxicheng.org/recommend/)
+4. [A nice chinese blog](http://www.cnblogs.com/sharpxiajun/p/3151395.html), [Another Chinese blog](http://dongxicheng.org/recommend/)
 
 5. Jobtracker bottleneck: scalability bottleneck, cluster resource sharing and allocation flexibility (slot based approach --- big or small tasks are assigned to the same slot) [source](http://www.slideshare.net/martyhall/hadoop-tutorial-mapreduce-part-6-job-execution-on-yarn) 
 
