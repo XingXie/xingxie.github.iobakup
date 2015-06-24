@@ -18,7 +18,7 @@ comments: true
 
   </loggers>
 ~~~
-{: .language-xml}
+<!--{: .language-xml}-->
 
 ## customized appender
 
@@ -62,7 +62,7 @@ log4j.appender.stdout.Target=System.out
 log4j.appender.stdout.layout=org.apache.log4j.SimpleLayout
 log4j.rootLogger=debug, stdout
 
-```xml
+~~~ xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
 <log4j:configuration>
@@ -74,9 +74,9 @@ log4j.rootLogger=debug, stdout
   <appender-ref ref="stdout"/>
 </root>
 </log4j:configuration>
-```
+~~~
 
-```java
+~~~ java
 // You can load other configurations as well.
 import org.apache.log4j.PropertyConfigurator;
 import org.apache.log4j.helpers.Loader;
@@ -99,12 +99,12 @@ root.setLevel(Level.WARN);
 or we can reload the configuration:
 // PropertyConfigurator.configure(url);
 DOMConfigurator.configure(url);
-```
+~~~
 
 Seperate the file output: I want to have debugging messages to one file and other messages to another file. This can only be done with XML because we need a LevelRange filter.
 in debug fuile, watch the filter attribute
 
-```xml
+~~~ xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
 <log4j:configuration>
@@ -139,7 +139,7 @@ in debug fuile, watch the filter attribute
   <appender-ref ref="file" />
 </root>
 </log4j:configuration>
-```
+~~~
 
 ## Work with Tomcat
 
@@ -151,14 +151,14 @@ Hint: If you do not want Tomcat to use log4j to log but only your application, y
 
 1. Do not use e.printStackTrace
 e.printStackTrace prints to the console. You will only see this messages, if you have defined a console appender. If you use Tomcat or other application server with a service wrapper and define a console appender, you will blow up your wrapper.log. You can use log.error(e,e). The second parameter passed an exception and will print the stack trace into the logfile.
-```java
+~~~ java
 try {
     ......... snip .......
 } catch (SomeException e) {
     log.error("Exception Message", e);
     // display error message to customer
 }
-```
+~~~
 
 2. Don't log and throw again
 Do not catch an exception, log the stacktrace and then continue to throw it. If higher levels log a message as well, you will end up with a stacktrace printed 2 or more times into the log files.
@@ -166,10 +166,10 @@ Do not catch an exception, log the stacktrace and then continue to throw it. If 
 3. Don't kill the stacktrace
 This code will erase the stacktrace from the SQLException. This is not recommended, because you will loose important information about the exception. Better do the following.
 That's all for this tutorial.
-```java
+~~~ java
  try{
 ... some code
     }catch(SQLException e){
         throw new RuntimeException("My Exception name", e);
 }￼￼
-```
+~~~
