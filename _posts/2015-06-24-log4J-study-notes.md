@@ -7,7 +7,7 @@ comments: true
 ---
 
 ## Different log level use
-~~~ xml
+``` xml
  <loggers>    
   <logger name="logexample.Bar" level="TRACE"/>
 
@@ -17,7 +17,7 @@ comments: true
     </root>  
 
   </loggers>
-~~~
+```
 {: .language-xml}
 
 ## customized appender
