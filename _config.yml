@@ -1,7 +1,7 @@
 # Site settings
-title: HyG
-email: gaohaoyang126@126.com
-description: 浩阳的博客 前端爱好者
+title: Xing Xie's Paradise
+email: xingxie01@gmail.com
+description: My Technical and Reading Blog
 # > # this means to ignore newlines until "baseurl:"
 #   Write an awesome description for your new site here. You can edit this
 #   line in _config.yml. It will appear in your document head meta (for
@@ -10,10 +10,10 @@ description: 浩阳的博客 前端爱好者
 # baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://xingxie.github.io/" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
-disqus: ''
+disqus: 'xingxie'
 comments: true
 
-github_username:  Gaohaoyang
+github_username:  xingxie
 permalink: /:year/:month/:day/:title/
 
 # Build settings
