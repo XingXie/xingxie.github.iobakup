@@ -12,7 +12,7 @@ comments: true
 
 ## Basics
 
-// JUnit test framework provides following important features
+JUnit test framework provides following important features
 1. Fixtures
 2. Test suites
 3. Test runners
@@ -28,9 +28,9 @@ Test suite means bundle a few unit test cases and run it together. In JUnit, bot
 Test runner is used for executing the test cases. Here is an example which assumes TestJunit test class already exists.
 
 JUnit classes are important classes which is used in writing and testing JUnits. Some of the important classes are
-..* Assert which contain a set of assert methods.
-..* TestCase which contain a test case defines the fixture to run multiple tests.
-..* TestResult which contain methods to collect the results of executing a test case.
+* Assert which contain a set of assert methods.
+* TestCase which contain a test case defines the fixture to run multiple tests.
+* TestResult which contain methods to collect the results of executing a test case.
 
 ## Junit API
 The most important package in classses. Some of the important class are:
