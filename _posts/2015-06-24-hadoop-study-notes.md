@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hadoop Study Nodes"
-date:   2015-05-15 14:06:05
+date:   2015-06-24
 categories: Hadoop
 excerpt: Hadoop Notes
 comments: true
@@ -44,7 +44,7 @@ when the replication factor is three, HDFS’s placement policy is to put one re
 Secondary NameNode: performs periodic checkpoints of the namespace and helps keep the size of file containing log of HDFS modifications within certain limits at the NameNode.
 
 3. preparing for mapreduce: loading files (64, 128MB), file system(native file system, hdfs, cloud), output(immutable), you define(input, map, reduce, output, use java or other languages, work with key-value pairs)
-4. [A nice chinese blog](http://www.cnblogs.com/sharpxiajun/p/3151395.html)
+4. [A nice chinese blog](http://www.cnblogs.com/sharpxiajun/p/3151395.html) [Another Chinese blog] (http://dongxicheng.org/recommend/)
 5. Jobtracker bottleneck: scalability bottleneck, cluster resource sharing and allocation flexibility (slot based approach --- big or small tasks are assigned to the same slot) [source](http://www.slideshare.net/martyhall/hadoop-tutorial-mapreduce-part-6-job-execution-on-yarn) 
 6. 
 
@@ -75,5 +75,3 @@ can be visualized
 ---- limitation
 batch processing, not interactive; designed for a specific problem domain; map reduce programming paradigm not commonly understood (functional) / lack of trained support professionals / API or security model are moving targes
 
-## Source: 
-[A very detailed Chinese blog] (http://dongxicheng.org/recommend/)
