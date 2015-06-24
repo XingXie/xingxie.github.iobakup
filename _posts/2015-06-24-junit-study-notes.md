@@ -17,8 +17,8 @@ JUnit test framework provides following important features
 
 Fixtures
 Fixtures is a fixed state of a set of objects used as a baseline for running tests. The purpose of a test fixture is to ensure that there is a well known and fixed environment in which tests are run so that results are repeatable. It includes
-* setUp() method which runs before every test invocation.
-* tearDown() method which runs after every test method.
+..* setUp() method which runs before every test invocation.
+..* tearDown() method which runs after every test method.
 
 Test suite means bundle a few unit test cases and run it together. In JUnit, both @RunWith and @Suite annotation are used to run the suite test. Here is an example which uses TestJunit1 & TestJunit2 test classes.
 
