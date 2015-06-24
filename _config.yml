@@ -10,7 +10,7 @@ description: 浩阳的博客 前端爱好者
 # baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://xingxie.github.io/" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
-disqus: 'xingxie'
+disqus: 'a'
 comments: true
 
 github_username:  Gaohaoyang
