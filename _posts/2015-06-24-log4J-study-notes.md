@@ -7,7 +7,7 @@ comments: true
 ---
 
 ## Different log level use
-``` xml
+~~~ xml
  <loggers>    
   <logger name="logexample.Bar" level="TRACE"/>
 
@@ -17,14 +17,14 @@ comments: true
     </root>  
 
   </loggers>
-```
+~~~
 {: .language-xml}
 
 ## customized appender
 
 Make sure the packages in configuration includes the self defined appenders. and MessageConsole tab is the name attribute of your MessageConsole
 
-```xml
+~~~ xml
 <?xml version="1.0" encoding="UTF-8"?>    
 <configuration status="error" packages="logexample">    
   <appenders>    
@@ -43,7 +43,7 @@ Make sure the packages in configuration includes the self defined appenders. and
     </root>  
   </loggers>    
 </configuration>
-```
+~~~
 
 ## Basics
 
