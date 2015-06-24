@@ -3,7 +3,8 @@ layout: post
 title:  "Hibernate Study Notes"
 date:   2015-06-24
 categories: Hibernate
-excerpt: 记录一下第一次面试成功的经历，联想服务前端实习
+excerpt: study notes
+comments: true
 ---
 
 * content
