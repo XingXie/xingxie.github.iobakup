@@ -1,13 +1,29 @@
 ---
 layout: post
-title:  "Jave Annotation Study Notes"
+title:  "Java Study Notes"
 date:   2015-06-24
 categories: Java
-excerpt: Java Annotation
+excerpt: Java study notes
+comments: true
 ---
 
 * content
 {:toc}
+
+## Java Generic Types
+
+To specify the upper bound of a type wildcard, the extends keyword is used, which indicates that the type argument is a subtype of the bounding class. So List<? extends Number> means that the given list contains objects of some unknown type which extends the Number class. For example, the list could be List<Float> or List<Number>. Reading an element from the list will return a Number, while adding non-null elements is once again not allowed.
+
+## import static
+
+Where the normal import declaration imports classes from packages, allowing them to be used without package qualification, the static import declaration imports static members from classes, allowing them to be used without class qualification.
+
+~~~ java
+ double r = Math.cos(Math.PI * theta);
+import static java.lang.Math.PI;
+Once the static members have been imported, they may be used without qualification:
+double r = cos(PI * theta);
+~~~
 
 **DTO** (Data Transfer Object) is a pattern and it is implementation (POJO/POCO) independent. DTO says, since each call to any remote interface is expensive, response to each call should bring as much data as possible. So, if multiple requests are required to bring data for a particular task, data to be brought can be combined in a DTO so that only one request can bring all the required data. 
 
