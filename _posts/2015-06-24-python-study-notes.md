@@ -2,7 +2,7 @@
 layout: post
 title:  "Python Study Notes"
 date:   2015-06-24
-categories: Python
+categories: Study-Notes
 excerpt: 
 comments: true
 ---
