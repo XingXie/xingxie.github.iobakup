@@ -7,7 +7,10 @@ excerpt: Install Spark Cluster
 comments: true
 ---
 
+
 ## Steps to Deploy SPARK
+
+Ubuntu 14.04, Scala 2.11, spark 1.2.2 (for using cassandra connector).
 
 1. Install java 8.
 
@@ -50,7 +53,7 @@ sbt/sbt -Dscala-2.11=true -Pyarn -Phadoop-2.3 assembly (CRITICAL adding -Dscala-
 sbt/sbt -Dscala-2.11=true -Pyarn -Phadoop-2.3 -Phive -Phive-thriftserver assembly
 ~~~
 
-[Refer](http://people.apache.org/~pwendell/spark-1.2.2-rc1-docs/building-spark.html#building-with-sbt) 
+[Build with SBT](http://people.apache.org/~pwendell/spark-1.2.2-rc1-docs/building-spark.html#building-with-sbt) 
 
 5. in master server, edit conf/slave, add add the worker machine ips. edit conf/spark-env.sh, add
 
