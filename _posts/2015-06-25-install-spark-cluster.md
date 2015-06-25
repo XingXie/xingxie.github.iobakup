@@ -12,7 +12,7 @@ comments: true
 
 Ubuntu 14.04, Scala 2.11, spark 1.2.2 (for using cassandra connector).
 
-1. Install java 8.
+1.Install java 8.
 
 ~~~ shell
 $ sudo add-apt-repository ppa:webupd8team/java
@@ -20,7 +20,7 @@ $ sudo apt-get update
 $ sudo apt-get install oracle-java8-installer
 $ sudo apt-get install oracle-java8-set-default
 ~~~
-2. create the user, and ssh within the cluster machines.
+2.create the user, and ssh within the cluster machines.
 
 * switch user su -l sparkuser, download the zip file 
 
@@ -30,7 +30,7 @@ wget http://d3kbcqa49mib13.cloudfront.net/spark-1.2.2.tgz
 
 note that the link might be changed
 
-3. create .bash_profile and source it after put the following lines:
+3.create .bash_profile and source it after put the following lines:
 
 ~~~ shell
 export CLICOLOR=R1
