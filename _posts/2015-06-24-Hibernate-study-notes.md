@@ -10,6 +10,9 @@ comments: true
 * content
 {:toc}
 
+## ---- Generating Hibernate annotated classes from database using eclipse
+
+[Link](http://j2eeandeclipsetutorials.blogspot.com/2012/08/generating-hibernate-annotated-classes.html)
 
 ## when you want sql query, don't miss add entity
 
