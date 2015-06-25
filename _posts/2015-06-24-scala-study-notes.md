@@ -362,7 +362,7 @@ DON'T:
 
 [scala simple parts -- VIDEO](https://www.youtube.com/watch?v=ecekSCX3B4Q)
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Summary")
+![alt text](https://cloud.githubusercontent.com/assets/5607138/8345003/d5efe3c6-1a9d-11e5-8896-1fb0b466965b.png "Summary")
 
 1. compose: use if-else, case
 2. match exp match{case number(n), case plus(l,r)}
