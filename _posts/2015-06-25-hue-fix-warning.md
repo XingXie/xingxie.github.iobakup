@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to Fix Hue Warning"
-date:   2015-06-24
+date:   2015-06-25
 categories: Solution
 excerpt: Cloudera
 comments: true
