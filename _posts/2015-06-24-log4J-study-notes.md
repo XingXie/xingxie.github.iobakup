@@ -2,7 +2,7 @@
 layout: post
 title:  "Log4j Study Notes"
 date:   2015-06-24
-categories: Log4J
+categories: Study-Notes
 comments: true
 ---
 
