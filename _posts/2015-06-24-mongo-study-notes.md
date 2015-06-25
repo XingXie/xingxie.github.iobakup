@@ -2,7 +2,7 @@
 layout: post
 title:  "Mongo Study Notes"
 date:   2015-06-24
-categories: GitHub
+categories: Mongo
 excerpt: git
 comments: true
 ---
