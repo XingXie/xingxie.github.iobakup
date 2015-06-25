@@ -3,7 +3,7 @@
 layout: post
 title:  "Kafka Tutorial"
 date:   2015-06-24
-categories: Kafka
+categories: Study-Notes
 excerpt: git
 comments: true
 ---
