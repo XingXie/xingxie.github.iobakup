@@ -10,6 +10,29 @@ comments: true
 * content
 {:toc}
 
+### useful linux commends
+
+~~~ shell
+netstat -lntu  // check the open port
+~~~
+
+
+upload file from local to remote
+
+~~~ shell
+scp *.doc username@mason.gmu.edu:your_directory_path
+scp user@host:file ~/Desktop/file
+~~~
+
+A simple find 
+
+~~~ shell
+/ -type f -name ""  // would do the trick if you know exact filename.
+find / -type f -iname “Daily*" // if you want to match more files.
+~~~
+
+find previous type-in command: *ctrl* + *r*, and then your keyword
+
 ### Eclipse Shortcut
 
 * command+option+R: refactor
@@ -55,3 +78,9 @@ Then you will see Documents => /mnt/Documents
 3. copy an assmbly file to the modules, change the pom accordingly. Add the two modules in parent's pom.
 
 4. import two existing maven projects to eclipse. build parent then eclipse:eclipse.
+
+### start cassandra: 
+
+~~~ shell
+launchctl load /usr/local/opt/cassandra/homebrew.mxcl.cassandra.plist
+~~~
