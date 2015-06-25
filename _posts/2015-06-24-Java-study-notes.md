@@ -2,7 +2,7 @@
 layout: post
 title:  "Java Study Notes"
 date:   2015-06-24
-categories: Java
+categories: Study-Notes
 excerpt: Java study notes
 comments: true
 ---
