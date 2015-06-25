@@ -2,7 +2,7 @@
 layout: post
 title:  "Hadoop Study Nodes"
 date:   2015-06-24
-categories: Hadoop
+categories: Study-Notes
 excerpt: Hadoop Notes
 comments: true
 ---
