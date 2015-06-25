@@ -44,7 +44,7 @@ export JAVA_HOME='/usr/lib/jvm/java-8-oracle'
 
 **SPARK_HOME** will be the place of the spark directory you install.
 
-4. tar -zxvf spark-1.2.2.tgz. you might need to install git before running the following command. 
+4.*tar -zxvf spark-1.2.2.tgz.* you might need to install git before running the following command. 
 go to the spark-1.2.2, then run 
 
 ~~~ shell
@@ -54,7 +54,7 @@ sbt/sbt -Dscala-2.11=true -Pyarn -Phadoop-2.3 -Phive -Phive-thriftserver assembl
 
 [Build with SBT](http://people.apache.org/~pwendell/spark-1.2.2-rc1-docs/building-spark.html#building-with-sbt) 
 
-5. in master server, edit conf/slave, add add the worker machine ips. edit conf/spark-env.sh, add
+5.in master server, edit conf/slave, add add the worker machine ips. edit conf/spark-env.sh, add
 
 ~~~ shell
 export SPARK_MASTER_IP=10.22.4.83 (inner EC2 IP) 
@@ -70,13 +70,13 @@ in slave servers, edit conf/spark-env.sh, add
 export SPARK_SCALA_VERSION=2.11
 ~~~
 
-6. in master spark-1.2.2/, sbin/start-all.sh. You can see process is running in master and slave machines.
+6.in master spark-1.2.2/, sbin/start-all.sh. You can see process is running in master and slave machines.
 When servers are up, you can check ui
 http://xxxx.compute.amazonaws.com:8080/
 
 you can do sbin/stop-all.sh to stop master and slaves. 
 
-7. upload your jar file from local to master and slave remote servers.
+7.upload your jar file from local to master and slave remote servers.
 Script uploadToServer.sh (Prefer)
 
 ~~~ shell
@@ -93,13 +93,13 @@ scp SparkStatistics-assembly-1.0.jar xing.xie@x1.compute.amazonaws.com:/vol/spar
 
 ## RUN SPARK JOBS
 
-1. run on a single mode
+1.run on a single mode
 
 In single node spark job, you can control the output report in your directory. 
 
-..1. In sparkuser home directory, create directory report and debug
+1.1.In sparkuser home directory, create directory report and debug
 
-..2. You can manually run the daily and weekly jobs. You can see the sys out. stage/prod is upon your server choice.
+1.2.You can manually run the daily and weekly jobs. You can see the sys out. stage/prod is upon your server choice.
   
 ~~~ shell  
   $SPARK_HOME/bin/spark-submit \
@@ -113,9 +113,9 @@ In single node spark job, you can control the output report in your directory.
     SparkStatistics-assembly-1.0.jar stage
 ~~~
 
-2. run on cluster mode
+2.run on cluster mode
 
-..1. The job will redirect to one of worker nodes. the report output is in work directory, 
+2.1.The job will redirect to one of worker nodes. the report output is in work directory, 
 
 ~~~ shell
 /vol/sparkuser/spark-1.2.2/work/driver-20150424010710-0004/report/WeeklyReport-2015-04-23T18:07:13.115-07:00.txt
@@ -131,25 +131,24 @@ to find the reports in the worker server.
 
 ui http://ec2-54-70-223-152.us-west-2.compute.amazonaws.com:8080/ can tell more about your job status.
 
-..2. You can manually run the daily and weekly jobs. You CANNOT see the system out. stage/prod is upon your server choice.
+2.2.You can manually run the daily and weekly jobs. You CANNOT see the system out. stage/prod is upon your server choice.
 	
 ~~~ shell	
-	$SPARK_HOME/bin/spark-submit   --class "xxx.WeeklyStatistics"  \
+$SPARK_HOME/bin/spark-submit   --class "xxx.WeeklyStatistics"  \
 	--master spark://10.0.0.0:7077 \
 	--deploy-mode cluster \
 	  SparkStatistics-assembly-1.0.jar stage
 	  
-  	$SPARK_HOME/bin/spark-submit   --class "xxx.DailyStatistics"  \
+$SPARK_HOME/bin/spark-submit   --class "xxx.DailyStatistics"  \
   	--master spark://10.0.0.0:7077 \
 	--deploy-mode cluster \
   	  SparkStatistics-assembly-1.0.jar stage
 ~~~
 
-3. Run using a crontab job, the scala-daily-stage.sh and scala-weekly-stage.sh are the files to 
+3.Run using a crontab job, the scala-daily-stage.sh and scala-weekly-stage.sh are the files to 
 
 ~~~ shell
 #!/bin/bash
-
 # script to run spark
 # requires JAVA_HOME and FUHU_HOME variables.
 fi
@@ -180,7 +179,6 @@ eval DATE="$DATE"
 $SPARK_HOME/bin/spark-submit  --class $MAIN --master $MASTER --driver-memory $EXECUTORMEM --executor-memory $EXECUTORMEM $SCALAJAR $SERVER > /vol/sparkuser/debug/$SERVER-$REPORTTYPE-$DATE.txt 2>&1 &
  ) 200>/var/lock/.scala.exclusivelock
  ~~~
-
 
 In this case, you need to create /var/lock/.scala.exclusivelock. The following is the production crontab
 
