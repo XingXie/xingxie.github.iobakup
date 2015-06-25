@@ -115,10 +115,11 @@ db.users.update(
 
 he following update uses the $push operator with:
 
-the $each modifier to append to the array 2 new elements,
-the $sort modifier to order the elements by ascending (1) score, and
-the $slice modifier to keep the last 3 elements of the ordered array.
+* the $each modifier to append to the array 2 new elements,
+* the $sort modifier to order the elements by ascending (1) score, and
+* the $slice modifier to keep the last 3 elements of the ordered array.
 
+~~~ mongo
 db.students.update(
    { _id: 1 },
    {
@@ -131,6 +132,7 @@ db.students.update(
      }
    }
 )
+~~~
 
 [Video Link](https://www.youtube.com/watch?v=Mz320k-WREA)
 
