@@ -2,7 +2,7 @@
 layout: post
 title:  "Flume Study Notes"
 date:   2015-06-24
-categories: Flume
+categories: Study-Notes
 excerpt: flume study notes
 ---
 
