@@ -2,7 +2,7 @@
 layout: post
 title:  "Spring Study Notes"
 date:   2015-06-24
-categories: Spring
+categories: Study-Notes
 excerpt: Spring Notes
 comments: true
 ---
