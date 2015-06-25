@@ -3,7 +3,7 @@
 layout: post
 title:  "Spark Study Notes"
 date:   2015-06-24
-categories: Spark
+categories: Study-Notes
 excerpt: spark
 comments: true
 ---
