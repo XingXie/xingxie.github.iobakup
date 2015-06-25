@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Android Debug Bridge ADB Instruction"
+title:  "How to install Android Debug Bridge ADB"
 date:   2015-06-24
-categories: Android-Debug-Bridge-ADB
+categories: Android-Debug-Bridge
 excerpt: 
 comments: true
 ---
