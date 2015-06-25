@@ -105,11 +105,13 @@ The components of a SQL UPDATE statement.
 
 EXAMPLE
 
+~~~ mongo
 db.users.update(
    { age: { $gt: 18 } },
    { $set: { status: "A" } },
    { multi: true }
 )
+~~~
 
 he following update uses the $push operator with:
 
