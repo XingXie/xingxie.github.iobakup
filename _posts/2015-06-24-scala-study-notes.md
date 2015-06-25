@@ -2,7 +2,7 @@
 layout: post
 title:  "Scala Study Notes"
 date:   2015-06-24
-categories: Scala
+categories: Study-Notes
 excerpt: 
 comments: true
 ---
