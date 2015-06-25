@@ -2,7 +2,7 @@
 layout: post
 title:  "Restful API Study Notes"
 date:   2015-06-24
-categories: REST
+categories: Study-Notes
 excerpt: Restful API
 ---
 
