@@ -392,11 +392,11 @@ List[Number] => List{type $T <: Number}
 
 
 [monad VIDEO](https://www.youtube.com/watch?v=Mw_Jnn_Y5iA&feature=relmfu)
-
+![alt text](https://cloud.githubusercontent.com/assets/5607138/8345068/c504f9b0-1a9e-11e5-9fee-4150c922aaeb.png)
 
 [monad VIDEO 2](https://www.youtube.com/watch?v=ZhuHCtR3xq8)
-
-
+![alt text](https://cloud.githubusercontent.com/assets/5607138/8345069/c71094f8-1a9e-11e5-96a9-38f4f7b6d095.png)
+![alt text](https://cloud.githubusercontent.com/assets/5607138/8345073/d406b1b0-1a9e-11e5-9e0d-a35ebdeb8daf.png)
 
 (ga) = Mb combines function (b -> Mc which is f), and rethrn Mc. 
 
