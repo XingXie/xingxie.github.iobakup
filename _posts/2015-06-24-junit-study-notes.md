@@ -2,7 +2,7 @@
 layout: post
 title:  "JUnit Study Notes"
 date:   2015-06-24
-categories: JUnit
+categories: Study-Notes
 excerpt: JUnit
 comments: true
 ---
