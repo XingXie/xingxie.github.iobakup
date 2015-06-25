@@ -178,7 +178,7 @@ eval DATE="$DATE"
 # --driver-memory $EXECUTORMEM is critical when run this job in standalone one spark node
 $SPARK_HOME/bin/spark-submit  --class $MAIN --master $MASTER --driver-memory $EXECUTORMEM --executor-memory $EXECUTORMEM $SCALAJAR $SERVER > /vol/sparkuser/debug/$SERVER-$REPORTTYPE-$DATE.txt 2>&1 &
  ) 200>/var/lock/.scala.exclusivelock
- ~~~
+~~~
 
 In this case, you need to create /var/lock/.scala.exclusivelock. The following is the production crontab
 
