@@ -2,7 +2,7 @@
 layout: post
 title:  "Jenkins Study Notes"
 date:   2015-06-24
-categories: Jenkins
+categories: Study-Notes
 excerpt: Jenkins study notes
 comments: true
 ---
