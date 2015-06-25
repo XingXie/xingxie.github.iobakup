@@ -2,7 +2,7 @@
 layout: post
 title:  "Hibernate Study Notes"
 date:   2015-06-24
-categories: Hibernate
+categories: Study-Notes
 excerpt: study notes
 comments: true
 ---
