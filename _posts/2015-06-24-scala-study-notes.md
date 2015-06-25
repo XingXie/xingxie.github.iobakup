@@ -67,23 +67,35 @@ def capitalizeAll(args: String*) = {
 }
 ~~~
 
+~~~ shell
 scala> capitalizeAll("rarity", "applejack")
 res2: Seq[String] = ArrayBuffer(Rarity, Applejack)
+~~~
 
-When do you want a Trait instead of an Abstract Class? If you want to define an interface-like type, you might find it difficult to choose between a trait or an abstract class. Either one lets you define a type with some behavior, asking extenders to define some other behavior. Some rules of thumb:
-Favor using traits. It’s handy that a class can extend several traits; a class can extend only one class.
-If you need a constructor parameter, use an abstract class. Abstract class constructors can take parameters; trait constructors can’t. For example, you can’t say trait t(i: Int) {}; the i parameter is illegal.
-Types
+**When do you want a Trait instead of an Abstract Class?**
+
+If you want to define an interface-like type, you might find it difficult to choose between a trait or an abstract class. Either one lets you define a type with some behavior, asking extenders to define some other behavior. Some rules of thumb:
+
+* Favor using traits. It’s handy that a class can extend several traits; a class can extend only one class.
+* If you need a constructor parameter, use an abstract class. Abstract class constructors can take parameters; trait constructors can’t. For example, you can’t say trait t(i: Int) {}; the i parameter is illegal.
+
+### Types
+
 Earlier, you saw that we defined a function that took an Int which is a type of Number. Functions can also be generic and work on any type. When that occurs, you’ll see a type parameter introduced with the square bracket syntax. Here’s an example of a Cache of generic Keys and Values.
+
+~~~ scala
 trait Cache[K, V] {
   def get(key: K): V
   def put(key: K, value: V)
   def delete(key: K)
 }
+~~~
 
+### Apply methods
 
-apply methods
 apply methods give you a nice syntactic sugar for when a class or object has one main use.
+
+~~~ shell
 scala> class Foo {}
 defined class Foo
 
@@ -94,9 +106,15 @@ defined module FooMaker
 
 scala> val newFoo = FooMaker()
 newFoo: Foo = Foo@5b83f762
-Functions are Objects
+~~~
+
+### Functions are Objects
+
 In Scala, we talk about object-functional programming often. What does that mean? What is a Function, really?
+
 A Function is a set of traits. Specifically, a function that takes one argument is an instance of a Function1 trait. This trait defines the apply() syntactic sugar we learned earlier, allowing you to call an object like you would a function.
+
+~~~ shell
 scala> object addOne extends Function1[Int, Int] {
      |   def apply(m: Int): Int = m + 1
      | }
@@ -104,10 +122,15 @@ defined module addOne
 
 scala> addOne(1)
 res2: Int = 2
+~~~
+
 There is Function0 through 22. Why 22? It’s an arbitrary magic number. I’ve never needed a function with more than 22 arguments so it seems to work out.
 
-CASE CLASSES WITH PATTERN MATCHING
+### CASE CLASSES WITH PATTERN MATCHING
+
 case classes are designed to be used with pattern matching. Let’s simplify our calculator classifier example from earlier.
+
+~~~ scala
 val hp20b = Calculator("hp", "20B")
 val hp30b = Calculator("hp", "30B")
 
@@ -117,41 +140,74 @@ def calcType(calc: Calculator) = calc match {
   case Calculator("hp", "30B") => "business"
   case Calculator(ourBrand, ourModel) => "Calculator: %s %s is of unknown type".format(ourBrand, ourModel)
 }
-Option
+~~~
+
+### Option
+
 Option is a container that may or may not hold something.
+
 The basic interface for Option looks like:
+
+~~~ scala
 trait Option[T] {
   def isDefined: Boolean
   def get: T
   def getOrElse(t: T): T
 }
+~~~
+
 Option itself is generic and has two subclasses: Some[T] or None
+
 Let’s look at an example of how Option is used:
+
 Map.get uses Option for its return type. Option tells you that the method might not return what you’re asking for.
 
 We would suggest that you use either getOrElse or pattern matching to work with this result.
-getOrElse lets you easily define a default value.
-val result = res1.getOrElse(0) * 2
 
-foreach
+getOrElse lets you easily define a default value.
+
+~~~ scala
+val result = res1.getOrElse(0) * 2
+~~~
+
+### foreach
+
 foreach is like map but returns nothing. foreach is intended for side-effects only.
+
+~~~ shell
 scala> numbers.foreach((i: Int) => i * 2)
 returns nothing.
+~~~
+
 You can try to store the return in a value but it’ll be of type Unit (i.e. void)
+
+~~~ shell
 scala> val doubled = numbers.foreach((i: Int) => i * 2)
 doubled: Unit = ()
+~~~
 
-partition
+### partition
 partition splits a list based on where it falls with respect to a predicate function.
+
+~~~ shell
 scala> val numbers = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 scala> numbers.partition(_ % 2 == 0)
 res0: (List[Int], List[Int]) = (List(2, 4, 6, 8, 10),List(1, 3, 5, 7, 9))
-foldLeft
+~~~
+
+### foldLeft
+
+~~~ shell
 scala> numbers.foldLeft(0)((m: Int, n: Int) => m + n)
 res0: Int = 55
+~~~
+
 0 is the starting value (Remember that numbers is a List[Int]), and m
 acts as an accumulator.
+
 Seen visually:
+
+~~~ shell
 scala> numbers.foldLeft(0) { (m: Int, n: Int) => println("m: " + m + " n: " + n); m + n }
 m: 0 n: 1
 m: 1 n: 2
@@ -164,44 +220,77 @@ m: 28 n: 8
 m: 36 n: 9
 m: 45 n: 10
 res0: Int = 55
-flatMap
+~~~
+
+### flatMap
+
 flatMap is a frequently used combinator that combines mapping and flattening. flatMap takes a function that works on the nested lists and then concatenates the results back together.
+
+~~~ shell
 scala> val nestedNumbers = List(List(1, 2), List(3, 4))
 nestedNumbers: List[List[Int]] = List(List(1, 2), List(3, 4))
 
 scala> nestedNumbers.flatMap(x => x.map(_ * 2))
 res0: List[Int] = List(2, 4, 6, 8)
+~~~
+
 Think of it as short-hand for mapping and then flattening:
+
+~~~ shell
 scala> nestedNumbers.map((x: List[Int]) => x.map(_ * 2)).flatten
 res1: List[Int] = List(2, 4, 6, 8)
+~~~
+
 Now filter out every entry whose phone extension is lower than 200.
+
+~~~ shell
 scala> extensions.filter((namePhone: (String, Int)) => namePhone._2 < 200)
 res0: scala.collection.immutable.Map[String,Int] = Map((steve,100), (bob,101))
+~~~
+
 Because it gives you a tuple, you have to pull out the keys and values with their positional accessors. Yuck!
 Lucky us, we can actually use a pattern match to extract the key and value nicely.
+
+~~~ shell
 scala> extensions.filter({case (name, extension) => extension < 200})
 res0: scala.collection.immutable.Map[String,Int] = Map((steve,100), (bob,101))
+~~~
 
-compose
+### compose
 compose makes a new function that composes other functions f(g(x))
+
+~~~ shell
 scala> val fComposeG = f _ compose g _
 fComposeG: (String) => java.lang.String = <function>
 
 scala> fComposeG("yay")
 res0: java.lang.String = f(g(yay))
-andThen
+~~~
+
+### andThen
 andThen is like compose, but calls the first function and then the second, g(f(x))
+
+~~~ shell
 scala> val fAndThenG = f _ andThen g _
 fAndThenG: (String) => java.lang.String = <function>
 
 scala> fAndThenG("yay")
 res1: java.lang.String = g(f(yay))
-Understanding PartialFunction
+~~~
+
+### Understanding PartialFunction
+
 A function works for every argument of the defined type. In other words, a function defined as (Int) => String takes any Int and returns a String.
+
 A Partial Function is only defined for certain values of the defined type. A Partial Function (Int) => String might not accept every Int.
+
 isDefinedAt is a method on PartialFunction that can be used to determine if the PartialFunction will accept a given argument.
+
 Note PartialFunction is unrelated to a partially applied function that we talked about earlier.
+
 See Also Effective Scala has opinions about PartialFunction.
+
+~~~ shell
 scala> val one: PartialFunction[Int, String] = { case 1 => "one" }
 one: PartialFunction[Int,String] = <function1>
 
@@ -210,9 +299,15 @@ res0: Boolean = true
 
 scala> one.isDefinedAt(2)
 res1: Boolean = false
-Mutable
+~~~
+
+### Mutable
+
 All of the above classes we’ve discussed were immutable. Let’s discuss the commonly used mutable collections.
-HashMap defines getOrElseUpdate, += HashMap API
+
+**HashMap** defines getOrElseUpdate, += HashMap API
+
+~~~ shell
 scala> val numbers = collection.mutable.Map(1 -> 2)
 numbers: scala.collection.mutable.Map[Int,Int] = Map((1,2))
 
@@ -227,13 +322,9 @@ res55: scala.collection.mutable.Map[Int,Int] = Map((2,3), (1,2))
 
 scala> numbers += (4 -> 1)
 res56: numbers.type = Map((2,3), (4,1), (1,2))
+~~~
 
-
-
-
-
-
-Learning Functional Programming without Growing a Neckbeard
+### Learning Functional Programming without Growing a Neckbeard
 
 Tell computer What to do => what things are by evaluation of expressions
 
@@ -249,9 +340,7 @@ testing more like plain english: must have, must startwith.
 
 none using option and isdefined option. for-yield over option,
 
-Martin Odersky: Scala with Style
-
-https://www.youtube.com/watch?v=kkTFx3-duc8
+### [Martin Odersky: Scala with Style -- VIDEO](https://www.youtube.com/watch?v=kkTFx3-duc8)
 
 guidelines:
 1. keep it simple
@@ -262,36 +351,18 @@ guidelines:
 6. don't stop improving too early
 
 three ways to write:
-1. combinators 2. recursive function + pattern matching 3. loop
+1. combinators
+2. recursive function + pattern matching 
+3. loop
 
 DON'T:
 1. don't use procedure syntax
 2. nesting method is preferred, not very deep
 3. pattern matching (functional convenient. for close system, single point) vs dynamic dispatch (core mechanism for extensible systems)
 
-PREFER:
-small interface, cannot extend case class, flatmap to  "for yield"
-更重要的作用是用做偏函数的占位符，比较给力
-Scala代码  收藏代码
-scala> def sum(x:Int, y:Int, z:Int):Int = x + y + z  
-sum: (x: Int, y: Int, z: Int)Int  
-  
-scala> val s = sum(2, 3, _:Int)  
-  
-在这里，给sum函数传入2,3作为前两个参数，但是不传入第3个函数，而是传入一个占位符，于是产生了只接受一个参数的函数s  
-s: (Int) => Int = <function1>  //函数的签名变成了一个参数  
-  
-scala> s(4)                                // 2 + 3 + 4  
-res9: Int = 9  
-  
-这个东东就是所谓的偏函数（部分应用函数）  
+[scala simple parts -- VIDEO](https://www.youtube.com/watch?v=ecekSCX3B4Q)
 
-http://notyy.iteye.com/blog/1153811
-
----- scala simple parts
-https://www.youtube.com/watch?v=ecekSCX3B4Q
-
-
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Summary")
 
 1. compose: use if-else, case
 2. match exp match{case number(n), case plus(l,r)}
