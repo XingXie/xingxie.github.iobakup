@@ -6,6 +6,7 @@ categories: Solution
 excerpt: Cloudera
 comments: true
 ---
+CDH 5.4.2 and HUE 3.7.
 
 ### Spark notebook warning
 
