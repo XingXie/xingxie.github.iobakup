@@ -2,8 +2,8 @@
 layout: post
 title:  "Coding Tricks, Skills, Shortcuts and Notes"
 date:   2015-06-24
-categories: Coding Tricks
-excerpt: coding tricks
+categories: Coding Notes
+excerpt: coding Notes
 comments: true
 ---
 
