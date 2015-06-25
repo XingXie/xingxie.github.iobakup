@@ -2,7 +2,7 @@
 layout: post
 title:  "Cassandra Practical and Study Notes"
 date:   2015-06-24
-categories: Cassandra
+categories: Study-Notes
 excerpt:
 comments: true
 ---
