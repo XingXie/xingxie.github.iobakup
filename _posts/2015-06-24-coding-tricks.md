@@ -2,7 +2,7 @@
 layout: post
 title:  "Coding Tricks, Skills, Shortcuts and Notes"
 date:   2015-06-24
-categories: Coding Notes
+categories: handy-notes
 excerpt: handy-notes
 comments: true
 ---
