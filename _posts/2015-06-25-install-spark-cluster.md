@@ -13,6 +13,7 @@ comments: true
 Ubuntu 14.04, Scala 2.11, spark 1.2.2 (for using cassandra connector).
 
 1. Install java 8.
+
 ~~~ shell
 $ sudo add-apt-repository ppa:webupd8team/java
 $ sudo apt-get update
