@@ -2,7 +2,7 @@
 layout: post
 title:  "Weka Tutorial"
 date:   2015-06-24
-categories: Weka
+categories: Study-Notes
 excerpt: machine learning
 comments: true
 ---
