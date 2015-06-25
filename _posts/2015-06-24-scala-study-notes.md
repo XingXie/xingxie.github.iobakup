@@ -373,28 +373,34 @@ DON'T:
 7. mutate
 
 modelling parameterized types:
+
+~~~ scala
 class Set[T]{...} => class set {type $T}
 class Set[+T]{...}
 Set[String] => Set {type $T = String}
 List[Number] => List{type $T <: Number}
+~~~
 
------
-Null- Its a Trait.
-null- Its an instance of Null- Similar to Java null.
-Nil- Represents an emptry List of anything of zero length. Its not that it refers to nothing but it refers to List which has no contents.
-Nothing is a Trait. Its a subtype of everything. But not superclass of anything. There are no instances of Nothing.
-None- Used to represent a sensible return value. Just to avoid null pointer exception. Option has exactly 2 subclasses- Some and None. None signifies no result from the method.
-Unit- Type of method that doesn’t return a value of any sort.
------
-monad---- https://www.youtube.com/watch?v=Mw_Jnn_Y5iA&feature=relmfu
+---
+
+1. Null- Its a Trait.
+2. null- Its an instance of Null- Similar to Java null.
+3. Nil- Represents an emptry List of anything of zero length. Its not that it refers to nothing but it refers to List which has no contents.
+4. Nothing is a Trait. Its a subtype of everything. But not superclass of anything. There are no instances of Nothing.
+5. None- Used to represent a sensible return value. Just to avoid null pointer exception. Option has exactly 2 subclasses- Some and None. None signifies no result from the method.
+6. Unit- Type of method that doesn’t return a value of any sort.
 
 
-monad -- https://www.youtube.com/watch?v=ZhuHCtR3xq8
+[monad VIDEO](https://www.youtube.com/watch?v=Mw_Jnn_Y5iA&feature=relmfu)
 
+
+[monad VIDEO 2](https://www.youtube.com/watch?v=ZhuHCtR3xq8)
 
 
 
 (ga) = Mb combines function (b -> Mc which is f), and rethrn Mc. 
-good resource:
-http://twitter.github.io/effectivescala/
-http://kukuruku.co/hub/scala/java-8-vs-scala-the-difference-in-approaches-and-mutual-innovations
+
+### good resource:
+
+[LINK](http://twitter.github.io/effectivescala/)
+[LINK](http://kukuruku.co/hub/scala/java-8-vs-scala-the-difference-in-approaches-and-mutual-innovations)
