@@ -2,7 +2,7 @@
 layout: post
 title:  "Git Study Notes"
 date:   2015-06-24
-categories: Study
+categories: Study-Notes
 excerpt: git
 comments: true
 ---
