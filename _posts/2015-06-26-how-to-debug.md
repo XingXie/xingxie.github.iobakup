@@ -18,6 +18,7 @@ When you run a comment line job in a remote machine, and it does not work. It mi
 * **Check your log first!** Log can tell exceptions, missing parameters, connection fail, etc. Be sure you know where your log is located, how many logs are exsited, and your log level is open to what (DEBUG, INFO, OR WARN?)
 
 * Analysis the log. Several workflow steps you can follow: 
+
 1. Jar dependencies (some HOME dierectory, output/input file existance)
 
 2. Connection to db/other server with the correct url, path, permission, user/pwd
