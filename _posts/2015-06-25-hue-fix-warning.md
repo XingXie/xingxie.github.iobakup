@@ -2,7 +2,7 @@
 layout: post
 title:  "How to Fix Hue Warning"
 date:   2015-06-25
-categories: Solution
+categories: Solutions
 excerpt: Cloudera
 comments: true
 ---
@@ -27,8 +27,7 @@ top right and then 'Install Oozie share lib',
 in our case, the lib is installing in /vol/oozie not /user/oozie. 
 therefore, we need to copy it between hdfs locations. 
 
-2.http://www.cloudera.com/content/cloudera/en/documentation/core/v5-2-x/topics/cdh_ig_oozie_configure.html
-login into server, sudo su root
+2.login into server, sudo su root, [source](http://www.cloudera.com/content/cloudera/en/documentation/core/v5-2-x/topics/cdh_ig_oozie_configure.html)
 
 ~~~ shell
 $ sudo -u hdfs hadoop fs -mkdir /user/oozie
