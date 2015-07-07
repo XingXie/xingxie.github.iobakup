@@ -61,11 +61,11 @@ Oozie adminstrator can allow more error codes to be handled for User-Retry. By a
 
 Examples of User-Retry in a workflow aciton is :
 
-```xml
+~~~ xml
 <workflow-app xmlns="uri:oozie:workflow:0.3" name="wf-name">
 <action name="a" retry-max="2" retry-interval="1">
 </action>
-```
+~~~
 
 * Suspend on nodes
 
@@ -73,8 +73,8 @@ Specifying oozie.suspend.on.nodes in a job.properties file lets users specify a 
 
 For example:
 
-```shell
+~~~ shell
 oozie.suspend.on.nodes=mr-node,my-pig-action,my-fork
-```
+~~~
 
 Specifying the above in a job.properties file will cause Oozie to suspend the workflow when any of those three actions are about to be executed.
