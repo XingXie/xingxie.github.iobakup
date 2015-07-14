@@ -165,10 +165,31 @@ In Cassandra (a distributed database!), there is no unique constraint enforcemen
 
 Also, there is no separate update operation (no in-place updates!). It’s always an upsert (mutate) in Cassandra. If you accidentally insert data with an existing row key and column key, the previous column value will be silently overwritten without any error (the change won’t be versioned; the data will be gone).
 
-* writes to commitlogs, to memtable, flushing (bloom filter) to sstable(disk), multiple sstables perform compaction for deleting old.
+* writes to commitlogs the to memtable iwth proper key (column), flushing (bloom filter) to sstable(disk) and its index, multiple sstables perform compaction for deleting old SStables (sorted strings table), commit logs will be deleted when the data is written to disk. 
 
 Bloom filter (all keys in data file). A Bloom filter, is a space-efficient probabilistic data structure that is used to test whether an element is a member of a set. False positives are possible, but false negatives are not. Cassandra uses bloom filters to save IO when performing a key lookup: each SSTable has a bloom filter associated with it that Cassandra checks before doing any disk seeks, making queries for keys that don't exist almost free. Bloom filters are surprisingly simple: divide a memory area into buckets (one bit per bucket for a standard bloom filter; more -typically four - for a counting bloom filter). To insert a key, generate several hashes per key, and mark the buckets for each hash. To check if a key is present, check each bucket; if any bucket is empty, the key was never inserted in the filter. If all buckets are non-empty, though, the key is only probably inserted - other keys' hashes could have covered the same buckets. See All you ever wanted to know about writing bloom filters for details and in particular why getting a really good output distribution is important.
 
+Consistency
+
+See also the API documentation.
+
+Consistency describes how and whether a system is left in a consistent state after an operation. In distributed data systems like Cassandra, this usually means that once a writer has written, all readers will see that write.
+
+On the contrary to the strong consistency used in most relational databases (ACID for Atomicity Consistency Isolation Durability) Cassandra is at the other end of the spectrum (BASE for Basically Available Soft-state Eventual consistency). Cassandra weak consistency comes in the form of eventual consistency which means the database eventually reaches a consistent state. As the data is replicated, the latest version of something is sitting on some node in the cluster, but older versions are still out there on other nodes, but eventually all nodes will see the latest version.
+
+* More specifically: R=read replica count W=write replica count N=replication factor Q=QUORUM (Q = N / 2 + 1)
+
+If W + R > N, you will have consistency
+
+W=1, R=N
+
+W=N, R=1
+
+W=Q, R=Q where Q = N / 2 + 1
+
+Cassandra provides consistency when R + W > N (read replica count + write replica count > replication factor).
+
+You get consistency if R + W > N, where R is the number of records to read, W is the number of records to write, and N is the replication factor. A ConsistencyLevel of ONE means R or W is 1. A ConsistencyLevel of QUORUM means R or W is ceiling((N+1)/2). A ConsistencyLevel of ALL means R or W is N. So if you want to write with a ConsistencyLevel of ONE and then get the same data when you read, you need to read with ConsistencyLevel ALL.
 
 ### Source
 
