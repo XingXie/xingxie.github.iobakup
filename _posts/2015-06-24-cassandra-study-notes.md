@@ -164,3 +164,14 @@ Otherwise, data could get accidentally overwritten.
 In Cassandra (a distributed database!), there is no unique constraint enforcement for row key or column key.
 
 Also, there is no separate update operation (no in-place updates!). It’s always an upsert (mutate) in Cassandra. If you accidentally insert data with an existing row key and column key, the previous column value will be silently overwritten without any error (the change won’t be versioned; the data will be gone).
+
+* writes to commitlogs, to memtable, flushing (bloom filter) to sstable(disk), multiple sstables perform compaction for deleting old.
+
+Bloom filter (all keys in data file). A Bloom filter, is a space-efficient probabilistic data structure that is used to test whether an element is a member of a set. False positives are possible, but false negatives are not. Cassandra uses bloom filters to save IO when performing a key lookup: each SSTable has a bloom filter associated with it that Cassandra checks before doing any disk seeks, making queries for keys that don't exist almost free. Bloom filters are surprisingly simple: divide a memory area into buckets (one bit per bucket for a standard bloom filter; more -typically four - for a counting bloom filter). To insert a key, generate several hashes per key, and mark the buckets for each hash. To check if a key is present, check each bucket; if any bucket is empty, the key was never inserted in the filter. If all buckets are non-empty, though, the key is only probably inserted - other keys' hashes could have covered the same buckets. See All you ever wanted to know about writing bloom filters for details and in particular why getting a really good output distribution is important.
+
+
+### Source
+
+[architechture wiki](http://wiki.apache.org/cassandra/ArchitectureOverview)
+
+[Link](https://wiki.apache.org/cassandra/MemtableSSTable)
