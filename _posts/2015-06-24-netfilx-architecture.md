@@ -21,7 +21,11 @@ self-service / monitoring. less copies/low resolution/ slow speed based on age o
 
 ![alt text](https://cloud.githubusercontent.com/assets/5607138/8680554/f1b1d726-2a16-11e5-937f-51359343c6ca.png)
 
+![screen shot 2015-07-14 at 11 24 29 am](https://cloud.githubusercontent.com/assets/5607138/8682398/a5e49170-2a21-11e5-95a5-8e722b3b91fc.png)
 
+![screen shot 2015-07-14 at 11 23 38 am](https://cloud.githubusercontent.com/assets/5607138/8682399/a5e54af2-2a21-11e5-9092-c7a37713dfeb.png)
+
+![screen shot 2015-07-14 at 12 13 30 pm](https://cloud.githubusercontent.com/assets/5607138/8682426/c778df94-2a21-11e5-91c3-e0e269a63ee9.png)
 
 ## Source ##
 http://www.infoq.com/presentations/scalable-resilient-systems
