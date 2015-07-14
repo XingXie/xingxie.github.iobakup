@@ -7,6 +7,30 @@ excerpt:
 comments: true
 ---
 
+## Notes ##
+
+"Build for three"
+
+self-service / monitoring. less copies/low resolution/ slow speed based on age of data.
+
+![alt text](https://cloud.githubusercontent.com/assets/5607138/8680553/f1b130b4-2a16-11e5-89c5-4af82dccd387.png)
+
+![alt text](https://cloud.githubusercontent.com/assets/5607138/8680552/f1b14e3c-2a16-11e5-9d4b-4bf70cc8ea6c.png)
+
+![alt text](https://cloud.githubusercontent.com/assets/5607138/8680551/f1b0a4fa-2a16-11e5-83f8-a76e06bf7877.png)
+
+![alt text](https://cloud.githubusercontent.com/assets/5607138/8680554/f1b1d726-2a16-11e5-937f-51359343c6ca.png)
+
+
+
+## Source ##
+http://www.infoq.com/presentations/scalable-resilient-systems
+
+http://www.slideshare.net/adrianco
+
+http://www.slideshare.net/adrianco/global-netflix-platform
+
+
 [Link](http://techblog.netflix.com/2013/01/hadoop-platform-as-service-in-cloud.html)
 [Link](http://techblog.netflix.com/2014/10/using-presto-in-our-big-data-platform.html)
 
