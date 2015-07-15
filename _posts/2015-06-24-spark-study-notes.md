@@ -133,3 +133,22 @@ RDDs are not ordered. So when you union RDDs, then the resulting RDD itself will
 * Spark’s usage of the Kafka consumer parameter auto.offset.reset is different from Kafka’s semantics. In Kafka, the behavior of setting auto.offset.reset to “smallest” is that the consumer will automatically reset the offset to the smallest offset when a) there is no existing offset stored in ZooKeeper or b) there is an existing offset but it is out of range. Spark however will always remove existing offsets and then start all the way from zero again. This means whenever you restart your application with auto.offset.reset = "smallest", your application will completely re-process all available Kafka data. Doh! See this discussionand that discussion.
 
 [source](http://www.michael-noll.com/blog/2014/10/01/kafka-spark-streaming-integration-example-tutorial/)
+
+### modes
+
+There are 4 was to run spark:
+
+* local
+* Standalone
+* YARN
+* Mesos
+
+When Spark is run in local mode (as you're doing on your laptop) a separate Spark Master and separate Spark Workers + Exectuors are not launched.
+
+Instead a single Java Virtual Machine (JVM) is launched with one Executor, whose ID is <driver>. This special Executor runs the Driver (which is the "Spark shell" application in this instance) and this special Executor also runs our Scala code. By default, this single Executor will be started with X threads, where X is equal to the # of cores on your machine.
+
+Local mode is used when you want to run Spark locally and not in a distributed cluster. Spark local mode is different than Standalone mode (which is still designed for a cluster setup).
+
+To summarize, in local mode, the Spark shell application (aka the Driver) and the Spark Executor is run within the same JVM. More precisely, the single Executor that is launched is named <driver> and this Executor runs both the driver code and the executes our Spark Scala transformations and actions.
+
+So, although there is no Master UI in local mode, if you are curious, here is what a Master UI looks like here is a screenshot:
