@@ -16,3 +16,10 @@ comments: true
 ![alt test](https://cloud.githubusercontent.com/assets/5607138/8345220/e03451d4-1aa0-11e5-8540-8b21907a6224.png)
 ![alt test](https://cloud.githubusercontent.com/assets/5607138/8345221/e34f8514-1aa0-11e5-83bf-48c809e84f19.png)
 ![alt test](https://cloud.githubusercontent.com/assets/5607138/8345224/e90edd38-1aa0-11e5-8fb5-6b4a26f2d141.png)
+
+The kafka cluster:  broker is represending partitons where consumer can fetch data. Data is presisted in broker. 
+
+Zookeeper is dealing with offset updates in consumer.
+
+
+![alt test](https://cloud.githubusercontent.com/assets/5607138/8816439/ea52bf16-2fdb-11e5-8b25-e3864da4723d.png)
