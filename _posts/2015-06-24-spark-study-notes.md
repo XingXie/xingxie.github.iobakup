@@ -8,6 +8,12 @@ excerpt: spark
 comments: true
 ---
 
+## Adv
+
+[! alt text](https://cloud.githubusercontent.com/assets/5607138/8816519/d82dc1f4-2fdc-11e5-9c74-6e2904f3bcd3.png)
+[! alt text](https://cloud.githubusercontent.com/assets/5607138/8816520/d83dac5e-2fdc-11e5-83eb-4c35c8d79ab5.png)
+
+
 ## Basics 
 
 Only one SparkContext may be active per JVM. You must stop() the active SparkContext before creating a new one.
