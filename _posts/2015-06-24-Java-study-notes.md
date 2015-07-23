@@ -114,3 +114,9 @@ List result = session.createQuery(hql)
 
 
 Smoke testing is a set of basic cheap to run tests that precede actual testing. It aims to verify that the build is deployed successfully and that all test env. aspects are running and ready for the actual test process. It saves you bringing the full extent of your testing wrath down a faulty build and just realizing that you have been testing on a bad env. or erroneously deployed build possibly too late.
+
+## immutable types like String
+for thread save.
+
+
+
