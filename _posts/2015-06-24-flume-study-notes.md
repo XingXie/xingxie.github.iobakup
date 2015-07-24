@@ -29,6 +29,7 @@ $ bin/flume-ng avro-client -H localhost -p 41414 -F /usr/logs/log.10
 
 The above command will send the contents of /usr/logs/log.10 to to the Flume source listening on that ports.
 
+[source](http://getindata.com/blog/slides/introduction-to-apache-flume/)
 ![text](https://cloud.githubusercontent.com/assets/5607138/8865771/ed9a9156-3168-11e5-8cc1-d0cc53855ed3.png)
 ![text](https://cloud.githubusercontent.com/assets/5607138/8865772/ed9fa4ca-3168-11e5-8ed2-0001e21490a7.png)
 ![text](https://cloud.githubusercontent.com/assets/5607138/8865773/eda568d8-3168-11e5-8292-5c9065fe8c09.png)
