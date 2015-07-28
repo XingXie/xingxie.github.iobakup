@@ -10,6 +10,10 @@ comments: true
 * content
 {:toc}
 
+## basics
+
+![alt text](https://cloud.githubusercontent.com/assets/5607138/8939102/712a780e-3517-11e5-9a28-ba0cb99d567c.png)
+
 ### Start mongo server
 
 ~~~ shell
@@ -56,11 +60,11 @@ As you create indexes, consider the following behaviors of indexes:
 
 Each index requires at least 8KB of data space.
 
-Adding an index has some negative performance impact for write operations. For collections with high write-to-read ratio, indexes are expensive since each insert must also update any indexes.
-Collections with high read-to-write ratio often benefit from additional indexes. Indexes do not affect un-indexed read operations.
+Adding an index has some negative performance impact for write operations. **For collections with high write-to-read ratio, indexes are expensive since each insert must also update any indexes**.
+Collections with high read-to-write ratio often benefit from additional indexes. **Indexes do not affect un-indexed read operations**.
 When active, each index consumes disk space and memory. This usage can be significant and should be tracked for capacity planning, especially for concerns over working set size.
 
-To improve the performance of this query, add an ascending, or a descending, index to theinventory collection on the type field. [1] In the mongo shell, you can create indexes using thedb.collection.ensureIndex() method:
+To improve the performance of this query, add an ascending, or a descending, index to theinventory collection on the type field. In the mongo shell, you can create indexes using thedb.collection.ensureIndex() method:
 
 ~~~ shell
 db.inventory.ensureIndex( { type: 1 } )
@@ -91,7 +95,7 @@ db.users.find( { "user.login": "tester" }, { "user.login": 1, _id: 0 } )
 
 However, the query can use the { "user.login": 1 } index to find matching documents.
 
-Read operations on sharded clusters are most efficient when directed to a specific shard. Queries to sharded collections should include the collection’s shard key. When a query includes a shard key, the mongos can use cluster metadata from the config database to route the queries to shards.
+Read operations on sharded clusters are most efficient when directed to a specific shard. **Queries to sharded collections should include the collection’s shard key**. When a query includes a shard key, the mongos can use cluster metadata from the config database to route the queries to shards.
 
 If a query does not include the shard key, the mongos must direct the query to all shards in the cluster. These scatter gather queries can be inefficient. On larger clusters, scatter gather queries are unfeasible for routine operations.
 
