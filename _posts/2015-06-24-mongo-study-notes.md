@@ -14,6 +14,9 @@ comments: true
 
 ![alt text](https://cloud.githubusercontent.com/assets/5607138/8939102/712a780e-3517-11e5-9a28-ba0cb99d567c.png)
 
+GOOD: all related things put in the same document, like user profile -> user activities. Compared with memcached, bson as the internal format, and the functionality is good as RDBMS, and speed is no big difference as memcached.
+flexible schema.
+
 ### Start mongo server
 
 ~~~ shell
