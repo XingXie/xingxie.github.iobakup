@@ -16,6 +16,16 @@ comments: true
 
 ## Basics 
 
+python vs scala
+
+First of all, performance won't most likely matter since it's almost all Scala under the hood for Spark and you can always use more machines to make up for anything else.
+
+Spark is written in Scala so knowing Scala will let you understand and modify what Spark does internally.
+Scala lacks the same amount of Data Science libraries and tools as Python.
+So if you want to do simple to moderately complex analysis using Spark then Python seems the way to go. If you want to build production systems then Scala is the way to go. If you want to do really complicated things then Scala with possibly a final Python layer.
+
+
+
 Only one SparkContext may be active per JVM. You must stop() the active SparkContext before creating a new one.
 
 The appName parameter is a name for your application to show on the cluster UI. master is a Spark, Mesos or YARN cluster URL, or a special “local” string to run in local mode. In practice, when running on a cluster, you will not want to hardcode master in the program, but rather launch the application with spark-submit and receive it there
