@@ -21,12 +21,12 @@ Teach others. If you want to learn something really well, teach it to someone el
 Be willing to take responsibility. When the next project comes up, ask to take the lead. It shows you have initiative and that you're willing to do more. Learn the strengths of the people on your team, and work to make them succeed.
 Q: What new processes did you have to learn?
 
-**Technical skills:
+**Technical skills:**
 
 Be able to model your ideas. Whether a UML document or the back of a napkin, you need to be able to describe the major components of a system and explain them to a 10-year-old. If you can do that, you can describe it to a team of developers or your CEO who's never seen an IDE.
 Lead by example. If you're still coding, work responsibly. Follow coding conventions, write tests and document your work. I've seen architects who take the "fun" parts for themselves, and throw scraps to the rest of the team. Remember everyone wants to be proud of their work and learn, and it's your responsibility to help them do that.
 
-**Non-technical skills:
+**Non-technical skills:**
 
 Be able to communicate ideas to both technical and non-technical people. I've worked with amazing engineers who simply can't explain what they're working on in a simple, straightforward manner.
 Strive for empathy. Put yourself in the other person's shoes, and try to focus on solving the problem in front of you. Too many developers feel "superior" to non-technical colleagues, and they come off like immature and inconsiderate. Educate without being condescending, and listen to what others have to say. The best ideas can come from anyone in the room. This is a good article on the subject.
