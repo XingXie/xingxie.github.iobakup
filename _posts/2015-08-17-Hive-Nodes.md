@@ -12,6 +12,10 @@ comments: true
 
 ## Basics
 
+[source](http://www.slideshare.net/RezaAmeri/an-intriduction-to-hive?qid=007d48b5-cde4-4322-a0d8-f1d0512f90f6&v=qf1&b=&from_search=28)
+
+![alt text](https://cloud.githubusercontent.com/assets/5607138/9316385/972a8026-44e9-11e5-8d85-6e7422fc3214.png)
+
 [source](http://www.slideshare.net/ye.mikez/hive-tuning?qid=013c7ca0-dc4d-451f-96ef-03d5ef61d002&v=qf1&b=&from_search=4)
 
 ![alt text](https://cloud.githubusercontent.com/assets/5607138/9312488/cb110b20-44d1-11e5-99be-3cbc121210a8.png)
