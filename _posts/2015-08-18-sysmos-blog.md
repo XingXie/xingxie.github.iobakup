@@ -1,3 +1,4 @@
+---
 layout: post
 title:  "Data Analytics: Sysomos Blogs"
 date:   2015-08-18
@@ -6,8 +7,7 @@ excerpt: study notes
 comments: true
 ---
 
-### [WORK HACK WEDNESDAY: MANAGING THE INFORMATION OVERLOAD AND GETTING 
-TO THE GOOD STUFF #WHW](http://blog.sysomos.com/2015/08/12/work-hack-wednesday-managing-the-information-overload-and-getting-to-the-good-stuff-whw/)
+### [WORK HACK WEDNESDAY: MANAGING THE INFORMATION OVERLOAD AND GETTING TO THE GOOD STUFF #WHW](http://blog.sysomos.com/2015/08/12/work-hack-wednesday-managing-the-information-overload-and-getting-to-the-good-stuff-whw/)
 
 ("Google" OR "@Google" OR "#Google") AND ("Alphabet" OR "#Alphabet")
 
