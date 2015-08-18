@@ -11,7 +11,7 @@ comments: true
 
 ("Google" OR "@Google" OR "#Google") AND ("Alphabet" OR "#Alphabet")
 
-#hastag means the user-defined categories. The search result by **MAP** can be selectively saved in an app **Pocket**. 
+\# hastag means the user-defined categories. The search result by **MAP** can be selectively saved in an app **Pocket**. 
 Pocket is an app for managing content you find on the Internet that you wish to enjoy at a later time (blogs, articles, videos etc.).
 Once saved to Pocket, the list of content is visible on any device – phone, tablet or computer.
 
