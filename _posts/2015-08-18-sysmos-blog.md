@@ -23,5 +23,9 @@ Once saved to Pocket, the list of content is visible on any device – phone, ta
 
 My best suggestion would be to do what I do when I create reports and use a mix of both. Show the numbers that matter towards your goals with qualitative measurements, but then dig deeper with a qualitative analysis as to why those numbers were showing as they did. What drove them? What was the underlying meaning of all those numbers? What’s the story behind the numbers?
 
+### [SOCIAL MEDIA REPORTING: WHERE TO START](http://blog.sysomos.com/2015/07/07/how-to-start-your-social-reporting/)
+
+Goals for social media should be **S.M.A.R.T.** This is a simple acronym that means your goals should be Specific, Measurable, Attainable, Relevant and Time-bound. So, for example, you want to get into social media so you can increase the public awareness of your brand, you should have a corresponding goal that would be something like “gain 1000 new fans/followers over our first 3 months.”
+
 
 
