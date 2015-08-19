@@ -27,5 +27,9 @@ My best suggestion would be to do what I do when I create reports and use a mix 
 
 Goals for social media should be **S.M.A.R.T.** This is a simple acronym that means your goals should be Specific, Measurable, Attainable, Relevant and Time-bound. So, for example, you want to get into social media so you can increase the public awareness of your brand, you should have a corresponding goal that would be something like “gain 1000 new fans/followers over our first 3 months.”
 
+### [WHY REPORTING IS CRUCIAL TO YOUR COMPANY’S SOCIAL EFFORTS](http://blog.sysomos.com/2015/07/02/why-reporting-is-crucial-to-companys-social-efforts/)
+
+However, I feel a project isn’t truly complete until reporting and lessons learned have been discussed. Reporting should **never** be an afterthought, it should be part of a project’s flow and timeline.
+
 
 
