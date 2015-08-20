@@ -46,3 +46,10 @@ However, I feel a project isn’t truly complete until reporting and lessons lea
 
 ![alt text](https://cloud.githubusercontent.com/assets/5607138/9390150/32d3226c-4724-11e5-8723-98721a52dbd0.png)
 
+### [3 WAYS TO USE SOCIAL INTELLIGENCE TO GROW YOUR COMMUNITY](http://blog.sysomos.com/2015/05/15/3-ways-to-use-social-intelligence-to-grow-your-community/)
+
+1. Find where people are talking
+2. Determine the real hotspots of activity for your community. a. sing Sysomos’s Most Authoritative tool can help you determine the blogs or people with the highest authority score that are talking about your brand or your search terms. b. There are plenty of people out there that may be super fans of your brand or highly interested in your space and talking about it that aren’t necessarily your typical “influencer”.
+3. Learn what your community values and give them lots of it. (Text cloud and Buzzgraph)
+
+
