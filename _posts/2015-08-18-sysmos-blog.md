@@ -31,5 +31,18 @@ Goals for social media should be **S.M.A.R.T.** This is a simple acronym that me
 
 However, I feel a project isn’t truly complete until reporting and lessons learned have been discussed. Reporting should **never** be an afterthought, it should be part of a project’s flow and timeline.
 
+### [USE SOCIAL INTELLIGENCE TO DESIGN CONTENT YOUR AUDIENCE WANTS](http://blog.sysomos.com/2015/06/02/use-social-intelligence-to-design-content-your-audience-wants/)
 
+1. First, you want to start searching for your brand name or topics around your industry to discover where people are talking. 
+
+![alt text](https://cloud.githubusercontent.com/assets/5607138/9390151/32d35796-4724-11e5-8471-bd7ca5cf3d4c.png)
+
+2. Second, when you’ve determined where the conversation is already happening it’s time to learn about HOW they’re happening.
+3. Now how can you figure what else they like so that you can tie it back to your brand? Again, the answer is with some research, and text analytics are always a great tool when trying to figure out what people are interested in.
+
+![alt text](https://cloud.githubusercontent.com/assets/5607138/9390152/32d5339a-4724-11e5-9cd2-b8fe616b5cfb.png)
+
+4. Just noticing what people are talking about around your industry can give you great ideas for what themes you should be focusing your content on. 
+
+![alt text](https://cloud.githubusercontent.com/assets/5607138/9390150/32d3226c-4724-11e5-8723-98721a52dbd0.png)
 
