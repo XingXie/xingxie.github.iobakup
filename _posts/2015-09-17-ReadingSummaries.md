@@ -184,6 +184,13 @@ Testing is the best way to ensure that your life gets better over time. By const
 
 **We find comfort among those who agree with us, and growth among those who don’t.**
 
+### A Guide to the Good Life: The Ancient Art of Stoic Joy - by William Irvine ###
+
+You are unlikely to have a good and meaningful life unless your can overcome your insatiability.
+
+**Philosophers provided their pupils with a philosophy of life: They taught them what things in life were worth pursuing and how best to pursue them.**
+
+**If you periodically experience minor discomforts, you will grow confident that you can withstand major discomforts as well. So you won't fear experiencing such discomforts at some future time. By experiencing minor discomforts, you train yourself to be courageous.**
 
 
 
