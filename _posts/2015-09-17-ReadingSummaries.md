@@ -91,14 +91,24 @@ TWELVE STANDARD FORMS OF VALUE
 1. Product
 Create a single tangible item or entity, then sell and deliver it for more than what it cost to make.
 
+If you’re not embarrassed by the first version of your product, you’ve launched too late.
+
+Pick three key attributes or features, get those things very, very right, and then forget about everything else. By focusing on only a few core features in the first version, you are forced to find the true essence and value of the product.
+
 2. Service
 Provide help or assistance, then charge a fee for the benefits rendered.
 
 3. Shared Resource
 Create a durable asset that can be used by many people, then charge for access.
 
+The tricky part about offering a Shared Resource is carefully monitoring usage levels.
+
+Finding the sweet spot between too few members and too many is the key to making a Shared Resource work.
+
 4. Subscription
 Offer a benefit on an ongoing basis, and charge a recurring fee.
+
+The key to Subscription offers is doing everything you can to keep customer attrition as low as possible.
 
 5. Resale
 Acquire an asset from a wholesaler, then sell that asset to a retail buyer at a higher price.
@@ -123,5 +133,57 @@ Take on the risk of some specific bad thing happening to the policy holder in ex
 
 12. Capital
 Purchase an ownership stake in a business, then collect a corresponding portion of the profit as a one-time payout or ongoing dividend.
+
+When creating a new offering, your primary goal should be to work your way through each Iteration Cycle as quickly as possible. Iteration is a structured form of learning that helps you make your offering better; the faster you learn, the more quickly you’ll be able to improve.
+
+“No business plan survives first contact with customers.” - Steve Blank
+
+Getting useful Feedback from your potential customers is the core of the Iteration Cycle.
+
+Ask open-ended questions.
+
+Two primary characteristics: convenience and fidelity.
+Things that are quick, reliable, easy, and flexible are convenient.
+Things that offer quality, status, aesthetic appeal, or emotional impact are high-fidelity.
+Almost every improvement you make to an offer can be thought of in terms of improving either convenience or fidelity.
+It’s incredibly difficult to optimize for both fidelity and convenience at the same time, so the most successful offerings try to provide the most convenience or fidelity among all competing offerings.
+
+Your job as a marketer isn’t to convince people to want what you’re offering: it’s to help your prospects convince themselves that what you’re offering will help them get what they really want.
+
+The best businesses in the world earn the trust of their prospects and help them understand why the offer is worth paying for. No one wants to make a bad decision or be taken advantage of, so sales mostly consists of helping the prospect understand what’s important and convincing them you’re capable of actually delivering on what you promise.
+
+In the classic sales book SPIN Selling, Neil Rackham describes the four phases of successful selling:
+(1) understanding the situation
+(2) defining the problem
+(3) clarifying the short-term and long-term implications of that problem
+(4) quantifying the need-payoff, or the financial and emotional benefits the customer would experience after the resolution of their problem.
+
+The performance of the offering must surpass the customer’s expectations in order for them to be satisfied.
+
+“Don’t compete with rivals - make them irrelevant.” - W. Chan Kim, Blue Ocean Strategy
+
+There are only four ways to increase your business’s revenue: 
+1. Increase the number of customers you serve. 
+2. Increase the average size of each Transaction by selling more. 
+3. Increase the frequency of transactions per customer. 
+4. Raise your prices.
+ 
+Great management is boring - and often unrewarding. The hallmark of an effective manager is anticipating likely issues and resolving them in advance, before they become an issue. Some of the best managers in the world look like they’re not doing much, but everything gets done on time and under budget.
+
+“To think is easy. To act is difficult. To act as one thinks is the most difficult.” - Goethe
+
+“What are the two or three most important things that I need to do today? What are the things that - if I got them done today - would make a huge difference?” Write only those tasks on your MIT list, then try to get them done first thing in the morning.
+
+**Setting an artificial deadline is extremely effective. If you set a goal to have all of your MITs done by 10:00 a.m., you’ll be amazed at how quickly you can complete the day’s most important tasks.**
+
+**By taking a few moments to consciously decide what you’re interested in and what you’re looking for, you can program your mind to alert you when it notices something relevant.**
+
+Testing is the best way to ensure that your life gets better over time. By constantly trying new things, you’re learning what works for you and what doesn’t. Over time, you’ll discover Patterns - things that make your life better and things that make your life worse.
+
+**If you don’t have a plan, your actions will be determined by someone else. By refusing to make the effort to move in the direction you think is best, you’re ceding Power to those who do have plans.**
+
+**We find comfort among those who agree with us, and growth among those who don’t.**
+
+
 
 
