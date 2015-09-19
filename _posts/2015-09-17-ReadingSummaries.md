@@ -192,5 +192,13 @@ You are unlikely to have a good and meaningful life unless your can overcome you
 
 **If you periodically experience minor discomforts, you will grow confident that you can withstand major discomforts as well. So you won't fear experiencing such discomforts at some future time. By experiencing minor discomforts, you train yourself to be courageous.**
 
+### The Time Paradox - by Philip Zimbardo and John Boyd ###
+
+**How you spend today ultimately determines both your past and future.**
+
+**It's not the events of the past that most strongly influence our lives. Our attitude toward events in the past matter more than the events themselves.**
+
+
+
 
 
