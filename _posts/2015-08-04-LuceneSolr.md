@@ -28,3 +28,10 @@ Solr includes a simple command line tool for POSTing various types of content to
 
 bin/post -c gettingstarted example/films/films.json
 
+A data source specifies the origin of data and its type. Somewhat confusingly, some data sources are configured within the associated entity processor. Data sources can also be specified in solrconfig.xml, which is useful when you have multiple environments (for example, development, QA, and production) differing only in their data sources.
+
+Once you have indexed the content you need in your Solr index, you will want to start thinking about your strategy for dealing with changes to those documents. Solr supports two approaches to updating documents that have only partially changed.
+The first is atomic updates. This approach allows changing only one or more fields of a document without having to re-index the entire document.
+The second approach is known as optimistic concurrency or optimistic locking. It is a feature of many NoSQL databases, and allows conditional updating a document based on its version. This approach includes semantics and rules for how to deal with version matches or mis-matches.
+Atomic Updates and Optimistic Concurrency may be used as independent strategies for managing changes to documents, or they may be combined: you can use optimistic concurrency to conditionally apply an atomic update.
+
