@@ -118,7 +118,7 @@ Smoke testing is a set of basic cheap to run tests that precede actual testing. 
 ## immutable types like String
 for thread save.
 
---- Effetive Java
+## Effetive Java
 // Enum singleton - the preferred approach
 
 public enum Elvis {
@@ -126,11 +126,47 @@ INSTANCE;
 public void leaveTheBuilding() { ... }
 }
 
+----
 This approach is functionally equivalent to the public field approach, except that it
 is more concise, provides the serialization machinery for free, and provides an
 ironclad guarantee against multiple instantiation, even in the face of sophisticated
 serialization or reflection attacks. While this approach has yet to be widely
 adopted, a single-element enum type is the best way to implement a singleton.
+
+a class can be
+made noninstantiable by including a private constructor:
+// Noninstantiable utility class
+public class UtilityClass {
+// Suppress default constructor for noninstantiability
+private UtilityClass() {
+throw new AssertionError();
+}
+...
+----
+class Person {
+private final Date birthDate;
+// Other fields, methods, and constructor omitted
+/**
+* The starting and ending dates of the baby boom.
+*/
+private static final Date BOOM_START;
+private static final Date BOOM_END;
+static {
+Calendar gmtCal =
+Calendar.getInstance(TimeZone.getTimeZone("GMT"));
+gmtCal.set(1946, Calendar.JANUARY, 1, 0, 0, 0);
+BOOM_START = gmtCal.getTime();
+gmtCal.set(1965, Calendar.JANUARY, 1, 0, 0, 0);
+BOOM_END = gmtCal.getTime();
+}
+public boolean isBabyBoomer() {
+return birthDate.compareTo(BOOM_START) >= 0 &&
+birthDate.compareTo(BOOM_END) < 0;
+}
+}
+
+prefer primitives to
+boxed primitives, and watch out for unintentional autoboxing.
 
 
 
