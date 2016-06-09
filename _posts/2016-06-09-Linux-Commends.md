@@ -65,5 +65,5 @@ By using disk usage (DU) command in Unix for example du –sh . | grep G  will l
 16. How do you find for how many days your Server is up?
 By using uptime command in UNIX
 
-1. You have an IP address in your network how will you find hostname and vice versa?
+17. You have an IP address in your network how will you find hostname and vice versa?
 nsloopup 10.150.xxx.xx
