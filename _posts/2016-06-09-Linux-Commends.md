@@ -11,6 +11,7 @@ comments: true
 {:toc}
 
 ## Linux Commends
+Source: http://javarevisited.blogspot.com/2011/04/symbolic-link-or-symlink-in-unix-linux.html#ixzz4B6L66N8x
 
 1. find ip with host name
 IP address using nslookup command in UNIX or Linux
@@ -46,9 +47,6 @@ Symbolic links are not updated.
 Hard links always refer to the source, even if moved or removed.
 ⋅⋅* Using symbolic link: ln -s realfile symfilename
 ⋅⋅* Update symbolic link: ln -nsf 1.3 latest
-
-
-Read more: http://javarevisited.blogspot.com/2011/04/symbolic-link-or-symlink-in-unix-linux.html#ixzz4B6L66N8x
 
 8. What is Zombie process in UNIX? How do you find Zombie process in UNIX?
 When a program forks and the child finishes before the parent, the kernel still keeps some of its information about the child in case the parent might need it - for example, the parent may need to check the child's exit status. To be able to get this information, the parent calls 'wait()'; In the interval between the child terminating and the parent calling 'wait()', the child is said to be a 'zombie' (If you do 'ps', the child will have a 'Z' in its status field to indicate this.)
