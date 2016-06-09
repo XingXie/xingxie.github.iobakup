@@ -39,16 +39,13 @@ cat /proc/cpuinfo
 ...Hard links cannot link directories.
 Cannot cross file system boundaries.
 Soft or symbolic links are just like hard links. It allows to associate multiple filenames with a single file. 
-
 ...However, symbolic links allows:
 To create links between directories.
 Can cross file system boundaries.
 These links behave differently when the source of the link is moved or removed.
 Symbolic links are not updated.
 Hard links always refer to the source, even if moved or removed.
-
 ..* Using symbolic link: ln -s realfile symfilename
-
 ..* Update symbolic link: ln -nsf 1.3 latest
 
 8. What is Zombie process in UNIX? How do you find Zombie process in UNIX?
