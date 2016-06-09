@@ -15,13 +15,10 @@ Source: http://javarevisited.blogspot.com/2011/04/symbolic-link-or-symlink-in-un
 
 1. find ip with host name
 IP address using nslookup command in UNIX or Linux
-
 2. How will you find which operating system your system is running on in UNIX?
 By using command "uname -a" in UNIX
-
 3. How do you check how much space left in current drive ?
 By using "df" command in UNIX. For example "df -h ." will list how full your current drive is. This is part of anyone day to day activity so I think this Unix Interview question will be to check anyone who claims to working in UNIX but not really working on it.
-
 4. What is the difference between Swapping and Paging?
 ⋅⋅* Swapping:
 Whole process is moved from the swap device to the main memory for execution. Process size must be less than or equal to the available main memory. It is easier to implementation and overhead to the system. Swapping systems does not handle the memory more flexibly as compared to the paging systems.
