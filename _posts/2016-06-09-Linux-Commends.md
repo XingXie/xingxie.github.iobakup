@@ -42,3 +42,28 @@ Zombie : The process is dead but have not been removed from the process table.
 
 9. In a file word UNIX is appearing many times? How will you count number?
 grep -c "Unix" filename
+
+10. How do you find which processes are using a particular file?
+By using lsof command in UNIX. It wills list down PID of all the process which is using a particular file.
+
+11. How do you find which remote hosts are connecting to your host on a particular port say 10123?
+By using netstat command execute netstat -a | grep "port" and it will list the entire host which is connected to this host on port 10123.
+
+12. What is nohup in UNIX?
+nohup is a special command which is used to run process in background, but it is slightly different than & which is normally used for putting a process in background. An UNIX process started with nohup will not stop even if the user who has stared log off from system. While background process started with & will stop as soon as user logoff.
+
+13. What is ephemeral port in UNIX?
+Ephemeral ports are port used by Operating system for client sockets. There is a specific range on which OS can open any port specified by ephemeral port range.
+
+14. There is a file Unix_Test.txt which contains words Unix, how will you replace all Unix to UNIX?
+You can answer this Unix Command Interview question by using SED command in UNIX for example you can execute following command to replace all Unix word to UNIX
+sed s/Unix/UNIX/g fileName
+
+15. Your application home directory is full? How will you find which directory is taking how much space?
+By using disk usage (DU) command in Unix for example du –sh . | grep G  will list down all the directory which has GIGS in Size.
+
+16. How do you find for how many days your Server is up?
+By using uptime command in UNIX
+
+1. You have an IP address in your network how will you find hostname and vice versa?
+nsloopup 10.150.xxx.xx
