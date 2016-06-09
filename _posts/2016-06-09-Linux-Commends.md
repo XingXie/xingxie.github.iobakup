@@ -10,14 +10,10 @@ comments: true
 * content
 {:toc}
 
-### Linux Commends
+## Linux Commends
 
 1. find ip with host name
 IP address using nslookup command in UNIX or Linux
-
-stock_trader@system:~/test nslookup trading_system
-Name:    trading_system.com
-Address:  192.24.112.23
 
 2. How will you find which operating system your system is running on in UNIX?
 By using command "uname -a" in UNIX
@@ -26,10 +22,8 @@ By using command "uname -a" in UNIX
 By using "df" command in UNIX. For example "df -h ." will list how full your current drive is. This is part of anyone day to day activity so I think this Unix Interview question will be to check anyone who claims to working in UNIX but not really working on it.
 
 4. What is the difference between Swapping and Paging?
-
 Swapping:
 Whole process is moved from the swap device to the main memory for execution. Process size must be less than or equal to the available main memory. It is easier to implementation and overhead to the system. Swapping systems does not handle the memory more flexibly as compared to the paging systems.
-
 Paging:
 Only the required memory pages are moved to main memory from the swap device for execution. Process size does not matter. Gives the concept of the virtual memory. It provides greater flexibility in mapping the virtual address space into the physical memory of the machine. Allows more number of processes to fit in the main memory simultaneously. Allows the greater process size than the available physical memory. Demand paging systems handle the memory more flexibly.
 
