@@ -167,4 +167,5 @@ Local mode is used when you want to run Spark locally and not in a distributed c
 
 To summarize, in local mode, the Spark shell application (aka the Driver) and the Spark Executor is run within the same JVM. More precisely, the single Executor that is launched is named <driver> and this Executor runs both the driver code and the executes our Spark Scala transformations and actions.
 
-So, although there is no Master UI in local mode, if you are curious, here is what a Master UI looks like here is a screenshot:
+## spark streaming
+spark dstream can be collected as one window. A window can define the length and sliding, can use the dstream rdd in a overlap fashion.
