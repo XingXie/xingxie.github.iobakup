@@ -55,6 +55,9 @@ Zombie : The process is dead but have not been removed from the process table.
 9. In a file word UNIX is appearing many times? How will you count number?
 grep -c "Unix" filename
 
+grep -w whole-word match -i: case insensitive -r: all files in current directory -v: invert matching -e "pattern": patthern matching
+-o show only the matching string -n: show line number.
+
 10. How do you find which processes are using a particular file?
 By using lsof command in UNIX. It wills list down PID of all the process which is using a particular file.
 
@@ -71,11 +74,22 @@ Ephemeral ports are port used by Operating system for client sockets. There is a
 You can answer this Unix Command Interview question by using SED command in UNIX for example you can execute following command to replace all Unix word to UNIX
 sed s/Unix/UNIX/g fileName
 
+the "s" command operates on the first match in a line and then moves to the next line.
+We will provide the "g" flag to the substitute command by "all matching".
+
 15. Your application home directory is full? How will you find which directory is taking how much space?
 By using disk usage (DU) command in Unix for example du –sh . | grep G  will list down all the directory which has GIGS in Size.
 
-16. How do you find for how many days your Server is up?
+16. How do you find for how many days your Server is up?s
 By using uptime command in UNIX
 
 17. You have an IP address in your network how will you find hostname and vice versa?
 nsloopup 10.150.xxx.xx
+
+18. combine comands and run comands sequencially (ls;date) > output.txt.
+
+19. To find out all *.c file located in 100s of subdirectories and move them to another directory called ~/old.src, use:
+
+$ find /path/to/dir -iname "*.c" -print0 | xargs -0 -I file mv file ~/old.src 
+
+20. 
