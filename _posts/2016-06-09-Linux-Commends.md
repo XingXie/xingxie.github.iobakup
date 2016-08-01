@@ -92,4 +92,8 @@ nsloopup 10.150.xxx.xx
 
 $ find /path/to/dir -iname "*.c" -print0 | xargs -0 -I file mv file ~/old.src 
 
-20. 
+20. "tee". See the output and write it to a file
+
+Use the tee command as follows to see the output on screen and also write to a log file named my.log:
+
+mycoolapp arg1 arg2 input.file | tee my.log
