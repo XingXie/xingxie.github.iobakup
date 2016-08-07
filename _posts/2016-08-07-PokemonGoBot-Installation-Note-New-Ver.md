@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PokemonGoBot New Version Instanllations"
+title:  "PokemonGoBot Installations Note New Version"
 date:   2016-08-07
 categories: Study-Notes
 excerpt: git
