@@ -16,7 +16,7 @@ Goto https://github.com/PokemonGoF/PokemonGo-Bot and download the lastest versio
 In PokemonGo-Bot directory, run pip install -r requirements. choose wipe option to remove the "old" pgoapi.
 
 All config files go to configs/. Note that only config.json works so far. If you have release_json, just copy the content to the 
-new config.json: the old keyword "under" should be replaced by "below". 
+new config.json: the old keyword "under" should be replaced by "below".  And it should put into the "release" section.
 
 go to http://pgoapi.com/ download the tar file, extract, then:
 cd src  --> make -> mv libencrypt.so ..../PokemonGo-Bot/encrypt.so
