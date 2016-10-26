@@ -12,7 +12,8 @@ In nginx.conf,
 
 Core Modules: must in the root level, like pid, user, etc.
 
-
+In order for us to set up a load balancer, we will need 2 modules: the proxy module and the upstream module. Both are built into Nginx by default.
+That being said, if we want to ensure that all requests from the same visitor always get processed by the same backend server, we need to enable the ip_hash option when declaring the upstream block.
 
 Ref:
-https://www.systemcodegeeks.com/web-servers/nginx/nginx-configuration-guide/
+http://www.theserverside.com/news/thread.tss?thread_id=81682
