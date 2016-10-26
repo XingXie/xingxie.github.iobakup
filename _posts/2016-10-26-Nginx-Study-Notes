@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Nginx Study Notes"
+date:   2016-10-26
+categories: Study-Notes
+excerpt: study notes
+comments: true
+---
+
+### Modules ###
+In nginx.conf,
+
+Core Modules: must in the root level, like pid, user, etc.
+
+
+
+Ref:
+https://www.systemcodegeeks.com/web-servers/nginx/nginx-configuration-guide/
